@@ -1,103 +1,213 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# pure shell 
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# path
+export PATH=$PATH:$HOME/.cargo/bin/:$HOME/go/bin:~/.local/bin/
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="bira"
+# util functions
+load_plugin() {
+  local plugin_name=$1
+  local url_var="${plugin_name}[url]"
+  local dir_var="${plugin_name}[dir]"
+  local source_file_var="${plugin_name}[source_file]"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+  local plugin_dir="$ZSH_PLUGINS_DIR/${(P)dir_var}"
+  local full_path="$plugin_dir/${(P)source_file_var}"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+  [[ -f $full_path ]] && source "$full_path"
+}
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+setup_plugins() {
+  for plugin_name in "${plugins[@]}"; do
+    url_var="${plugin_name}[url]"
+    source_file_var="${plugin_name}[source_file]"
+    dir_var="${plugin_name}[dir]"
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+    url=${(P)url_var}
+    source_file=${(P)source_file_var}
+    dir=${(P)dir_var}
 
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+    plugin_dir="$ZSH_PLUGINS_DIR/$dir"
+    full_path="$plugin_dir/$source_file"
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+    [[ ! -d $plugin_dir ]] && 
+        git clone --depth=1 "$url" "$plugin_dir"
+  done
+}
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+# extras
+ZSH_EXTRAS_DIR="${XDG_DATA_HOME:-${HOME}/.zsh_extras}"
+ZSH_COMPLETIONS_DIR="${ZSH_EXTRAS_DIR}/completions"
+ZSH_PLUGINS_DIR="${ZSH_EXTRAS_DIR}/plugins"
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+[[ ! -d "$ZSH_EXTRAS_DIR" ]] && mkdir -p "$ZSH_EXTRAS_DIR"
+[[ ! -d "$ZSH_COMPLETIONS_DIR" ]] && mkdir -p "$ZSH_COMPLETIONS_DIR"
+[[ ! -d "$ZSH_PLUGINS_DIR" ]] && mkdir -p "$ZSH_PLUGINS_DIR"
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+# completions
+if (( $+commands[docker] )) && [ ! -f "${ZSH_COMPLETIONS_DIR}/_docker" ]; then
+  docker completion zsh > "${ZSH_COMPLETIONS_DIR}/_docker"
+fi
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+autoload -Uz compinit
+fpath=("$ZSH_COMPLETIONS_DIR" $fpath)
+ZSH_COMPDUMP="${ZDOTDIR:-$HOME}/.zcompdump"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+compinit -C
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+if [[ ! -s "$ZSH_COMPDUMP.zwc" || "$ZSH_COMPDUMP" -nt "$ZSH_COMPDUMP.zwc" ]]; then
+  zcompile "$ZSH_COMPDUMP"
+fi
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# plugins
+typeset -A syntax_highlighting=(
+  [url]="https://github.com/zdharma-continuum/fast-syntax-highlighting.git"
+  [dir]="fast-syntax-highlighting"
+  [source_file]="fast-syntax-highlighting.plugin.zsh"
+)
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+typeset -A auto_suggestions=(
+  [url]="https://github.com/zsh-users/zsh-autosuggestions.git"
+  [dir]="zsh-autosuggestions"
+  [source_file]="zsh-autosuggestions.zsh"
+)
 
-source $ZSH/oh-my-zsh.sh
+typeset -a plugins=("syntax_highlighting" "auto_suggestions")
 
-# User configuration
+zle-line-init() {
+  load_plugin syntax_highlighting
+  zle -D zle-line-init
+}
 
-# export MANPATH="/usr/local/man:$MANPATH"
+zle -N zle-line-init
+load_plugin auto_suggestions
+bindkey '^Y' autosuggest-accept
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# aliases
+alias ls='ls --color'
+for cmd in v vi vim; do alias $cmd='nvim'; done
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# fzf
+if (( $+commands[fzf] )); then 
+  export FZF_DEFAULT_OPTS="
+    --bind 'ctrl-a:toggle-all'
+    --bind 'ctrl-d:half-page-down'
+    --bind 'ctrl-u:half-page-up'
+    --bind 'ctrl-y:accept'
+    --height 50%
+    --layout reverse
+    --color 'pointer:#E8B589,prompt:#6E94B2'
+    --prompt 'fzf ❯ '
+    --info hidden
+  "
+fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# tmux-sessionizer
+if (( $+commands[fzf] )); then 
+  tmux-sessionizer() {
+    if [[ $# -eq 1 ]]; then
+        selected=$1
+    else
+        selected=$(find ~/work ~/projects ~/ ~/personal -mindepth 1 -maxdepth 1 -type d | fzf --reverse)
+    fi
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cd=z
-eval "$(zoxide init zsh)"
+    if [[ -z $selected ]]; then
+        return
+    fi
+
+    selected_name=$(basename "$selected" | tr . _)
+    tmux_running=$(pgrep tmux)
+
+    tmux has-session -t="$selected_name" 2>/dev/null
+    session_exists=$?
+
+    if [[ -z "$TMUX" ]]; then
+        if [[ $session_exists -eq 0 ]]; then
+            tmux attach-session -t "$selected_name"
+        else
+            tmux new-session -s "$selected_name" -c "$selected"
+        fi
+    else
+        if [[ $session_exists -ne 0 ]]; then
+            tmux new-session -ds "$selected_name" -c "$selected"
+        fi
+        tmux switch-client -t "$selected_name"
+    fi
+  }
+  alias ts=tmux-sessionizer
+fi
+
+# history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
+# completions
+setopt AUTO_LIST
+setopt AUTO_MENU
+setopt COMPLETE_IN_WORD
+setopt ALWAYS_TO_END
+setopt MENU_COMPLETE
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# colored completion
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# group matches
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*:matches' group 'yes'
+zstyle ':completion:*:options' description 'yes'
+zstyle ':completion:*:options' auto-description '%d'
+zstyle ':completion:*:corrections' format ' %F{green}-- %d (errors: %e) --%f'
+zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+zstyle ':completion:*:default' list-prompt '%S%M matches%s'
+zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' verbose yes
+
+# caching
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path "${ZDOTDIR:-$HOME}/.zcompcache"
+
+# dirs
+zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
+zstyle ':completion:*:*:cd:*:directory-stack' menu yes select
+zstyle ':completion:*:-tilde-:*' group-order 'named-directories' 'path-directories' 'users' 'expand'
+zstyle ':completion:*' squeeze-slashes true
+
+# history
+zstyle ':completion:*:history-words' stop yes
+zstyle ':completion:*:history-words' remove-all-dups yes
+zstyle ':completion:*:history-words' list false
+zstyle ':completion:*:history-words' menu yes
+
+if (( $+commands[fzf] )); then 
+  fzf-history-widget() {
+    local selected_cmd
+    selected_cmd=$(fc -rl 1 | awk '{$1=""; sub(/^ /, ""); print}' | awk '!seen[$0]++' | fzf +s)
+    if [[ -n $selected_cmd ]]; then
+      BUFFER=$selected_cmd
+      CURSOR=${#BUFFER}
+    fi
+    zle reset-prompt
+  }
+  zle -N fzf-history-widget
+  bindkey '^R' fzf-history-widget
+fi
+
+# prompt
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+setopt PROMPT_SUBST
+
+pending_jobs() {
+ [[ $#jobstates -ne 0 ]] && echo '%B%F{magenta}*%f%b'
+}
+
+PROMPT='
+%F{yellow}%~%f
+${VIRTUAL_ENV:+"($(basename $VIRTUAL_ENV)) "}$(pending_jobs)%(?.%F{blue}.%F{red})❯%f '
+
+PROMPT2='%F{242}...%f '
