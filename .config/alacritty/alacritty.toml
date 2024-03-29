@@ -1,0 +1,33 @@
+[colors.bright]
+black = "0x828a9a"
+blue = "0x72cce8"
+cyan = "0xf69c5e"
+green = "0x9dd274"
+magenta = "0xba9cf3"
+red = "0xff6578"
+white = "0xe1e3e4"
+yellow = "0xeacb64"
+
+[colors.normal]
+black = "0x181a1c"
+blue = "0x72cce8"
+cyan = "0xf69c5e"
+green = "0x9dd274"
+magenta = "0xba9cf3"
+red = "0xff6578"
+white = "0xe1e3e4"
+yellow = "0xeacb64"
+
+[colors.primary]
+background = "0x2a2f38"
+foreground = "0xe1e3e4"
+
+[font]
+size = 16.0
+normal = { family = "GohuFont uni14 Nerd Font", style = "Regular" }
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+dynamic_padding = true
