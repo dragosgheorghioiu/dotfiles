@@ -50,8 +50,8 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && $refre
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && $refresh_i3status
 
 
-bindsym Print exec xfce4-screenshooter -c && exit
-bindsym $mod+Print exec xfce4-screenshooter -r -c && exit
+bindsym Print exec flameshot full -c && exit
+bindsym $mod+Print exec flameshot gui
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
