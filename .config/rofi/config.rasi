@@ -150,4 +150,28 @@ configuration {
       sorting-method:    "name";
   }
 }
+//@theme "/home/dregos/.local/share/rofi/themes/nord.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/rounded-gray-dark.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/nord.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/rounded-gray-dark.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/rounded-red-dark.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/rounded-red-dark.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/nord.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/rounded-nord-dark.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/nord.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/rounded-nord-dark.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/nord.rasi"
+
+//@theme "/home/dregos/.local/share/rofi/themes/rounded-red-dark.rasi"
+
 @theme "/home/dregos/.local/share/rofi/themes/nord.rasi"

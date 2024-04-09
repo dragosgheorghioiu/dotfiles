@@ -37,8 +37,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 exec --no-startup-id xfce4-clipman
 
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 2
+default_floating_border pixel 2
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -223,8 +223,10 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-exec_always --no-startup-id  feh --bg-scale --zoom fill ~/Pictures/OuterWilds.jpg
+exec_always --no-startup-id feh --bg-scale --zoom fill ~/Pictures/OuterWilds.jpg
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec_always --no-startup-id $HOME/.screenlayout/default.sh
+
+exec_always --no-startup-id "killall -q /usr/bin/picom; /usr/bin/picom --config ~/.config/picom/picom.conf -b"
