@@ -19,16 +19,16 @@ white = "0xe1e3e4"
 yellow = "0xeacb64"
 
 [colors.primary]
-background = "0x13161b"
+background = "0x1c1625"
 foreground = "0xe1e3e4"
 
 [font]
-size = 16.0
-normal = { family = "GohuFont uni14 Nerd Font", style = "Regular" }
+size = 14.0
+normal = { family = "JetBrains Mono NF", style = "Regular" }
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"
 TERM = "xterm-256color"
 
 [window]
-padding = {x = 0, y = 10}
+padding = { x = 0, y = 4 }
