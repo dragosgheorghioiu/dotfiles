@@ -15,6 +15,9 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local battery_widget = require("battery-widget")
+local layout_indicator = require("keyboard-layout-indicator")
+local volume_control = require("volume-control")
+local dpi = beautiful.xresources.apply_dpi
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -58,7 +61,7 @@ local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.ge
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "kitty" .. " --single-instance"
 editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -129,11 +132,30 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
+-- Volume widget
+volumecfg = volume_control({
+	font = "JetBrainsMono Nerd Font Propo " .. dpi(14),
+	widget_text = {
+		on = "  <span color='#4b6568'></span>%3d%% ", -- three digits, fill with leading spaces
+		off = "  <span color='#4b6568'></span> MUT ",
+	},
+})
+
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
-mytextclock.format = "  <span color='#4b6568'>󰥔</span> %H:%M  <span color='#4b6568'></span> %d %b %Y "
+kbdcfg = layout_indicator({
+	layouts = {
+		{ name = "us", layout = "us", variant = nil },
+		{ name = "ro", layout = "ro", variant = "std" },
+	},
+	-- optionally, specify commands to be executed after changing layout:
+	post_set_hooks = {
+		"xmodmap ~/.Xmodmap",
+		"setxkbmap -option caps:escape",
+	},
+})
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -196,6 +218,17 @@ screen.connect_signal("property::geometry", set_wallpaper)
 awful.screen.connect_for_each_screen(function(s)
 	-- Wallpaper
 	set_wallpaper(s)
+
+	local font_string = "JetBrainsMono Nerd Font Propo " .. tostring(dpi(14, s))
+	beautiful.font = font_string
+
+	-- set height of wibar
+	local wibar_height = dpi(36, s)
+
+	-- set font for textclock for each screen
+	mytextclock.format = "<span font='"
+		.. font_string
+		.. "'>  <span color='#4b6568'>󰥔</span> %H:%M  <span color='#4b6568'></span> %d %b %Y </span>"
 
 	-- Each screen has its own tag table.
 	awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
@@ -275,14 +308,13 @@ awful.screen.connect_for_each_screen(function(s)
 	-- mysystray:set_base_size(25)
 
 	-- Create the wibox
-	s.mywibox = awful.wibar({ position = "top", screen = s })
+	s.mywibox = awful.wibar({ position = "top", screen = s, height = wibar_height })
 
 	-- Add widgets to the wibox
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
 		{ -- Left widgets
 			layout = wibox.layout.fixed.horizontal,
-			mylauncher,
 			s.mytaglist,
 			s.mytasklist, -- Middle widget
 		},
@@ -294,7 +326,8 @@ awful.screen.connect_for_each_screen(function(s)
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
 			mysystray,
-			mykeyboardlayout,
+			-- kbdcfg.widget,
+			volumecfg.widget,
 			battery_widget({
 				adapter = "BAT1",
 				ac_prefix = ' <span color="#4b6568">󰂄 </span>',
@@ -313,6 +346,7 @@ awful.screen.connect_for_each_screen(function(s)
 				percent_colors = {
 					{ 100, "#aaaaa9" },
 				},
+				widget_font = font_string,
 			}),
 			mytextclock,
 			-- s.mylayoutbox,
@@ -380,19 +414,18 @@ globalkeys = gears.table.join(
 	awful.key({ modkey, "Shift" }, "q", function()
 		awful.util.spawn_with_shell("rofi -show power-menu -modi power-menu:rofi-power-menu")
 	end, { description = "quit awesome", group = "awesome" }),
-
 	awful.key({}, "XF86AudioRaiseVolume", function()
-		awful.util.spawn_with_shell("pactl set-sink-volume @DEFAULT_SINK@ +5%")
-	end, { description = "raise volume", group = "volume" }),
-
+		volumecfg:up()
+	end),
 	awful.key({}, "XF86AudioLowerVolume", function()
-		awful.util.spawn_with_shell("pactl set-sink-volume @DEFAULT_SINK@ -5%")
-	end, { description = "lower volume", group = "volume" }),
-
+		volumecfg:down()
+	end),
 	awful.key({}, "XF86AudioMute", function()
-		awful.util.spawn_with_shell("pactl set-sink-mute @DEFAULT_SINK@ toggle")
-	end, { description = "mute audio", group = "volume" }),
-
+		volumecfg:toggle()
+	end),
+	awful.key({ "Shift" }, "Shift_R", function()
+		kbdcfg:next()
+	end),
 	awful.key({ modkey }, "l", function()
 		awful.tag.incmwfact(0.05)
 	end, { description = "increase master width factor", group = "layout" }),
@@ -446,6 +479,9 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "d", function()
 		awful.spawn("rofi -drun-use-desktop-cache -show drun -show-icons")
 	end, { description = "show the menubar", group = "launcher" }),
+	awful.key({ modkey }, "w", function()
+		awful.spawn("rofi -show window -show-icons")
+	end, { description = "show the open windows", group = "launcher" }),
 	awful.key({ modkey }, "Print", function()
 		awful.spawn("flameshot gui")
 	end, { description = "show the menubar", group = "launcher" })
