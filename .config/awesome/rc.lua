@@ -61,7 +61,7 @@ local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.ge
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty" .. " --single-instance"
+terminal = "alacritty"
 editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -136,8 +136,8 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 volumecfg = volume_control({
 	font = "JetBrainsMono Nerd Font Propo " .. dpi(14),
 	widget_text = {
-		on = "  <span color='#4b6568'></span>%3d%% ", -- three digits, fill with leading spaces
-		off = "  <span color='#4b6568'></span> MUT ",
+		on = " <span color='#4b6568'></span>% 3d%% ", -- three digits, fill with leading spaces
+		off = " <span color='#4b6568'></span> MUT ",
 	},
 })
 
@@ -260,7 +260,7 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 
 	-- Create a tasklist widget
-	s.mytasklist = awful.widget.tasklist({
+	s.mytasklist = require("class_name_tasklist")({
 		screen = s,
 		filter = awful.widget.tasklist.filter.focused,
 		buttons = tasklist_buttons,
@@ -268,8 +268,12 @@ awful.screen.connect_for_each_screen(function(s)
 			{
 				{
 					{
-						id = "text_role",
-						widget = wibox.widget.textbox,
+						{
+							id = "text_role",
+							widget = wibox.widget.textbox,
+						},
+						widget = wibox.container.constraint,
+						width = 750,
 					},
 					layout = wibox.layout.fixed.horizontal,
 				},
@@ -316,7 +320,7 @@ awful.screen.connect_for_each_screen(function(s)
 		{ -- Left widgets
 			layout = wibox.layout.fixed.horizontal,
 			s.mytaglist,
-			s.mytasklist, -- Middle widget
+			s.mytasklist,
 		},
 		{
 			wibox.widget.base.make_widget(),
