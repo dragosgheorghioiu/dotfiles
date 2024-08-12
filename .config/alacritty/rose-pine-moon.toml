@@ -3,7 +3,7 @@
 
 [colors.primary]
 foreground = "#e0def4"
-background = "#1c1625"
+background = "#232136"
 dim_foreground = "#908caa"
 bright_foreground = "#e0def4"
 
@@ -46,7 +46,7 @@ background = "#44415a"
 [colors.normal]
 black = "#393552"
 red = "#eb6f92"
-green = "#31748f"
+green = "#3e8fb0"
 yellow = "#f6c177"
 blue = "#9ccfd8"
 magenta = "#c4a7e7"
@@ -56,7 +56,7 @@ white = "#e0def4"
 [colors.bright]
 black = "#6e6a86"
 red = "#eb6f92"
-green = "#31748f"
+green = "#3e8fb0"
 yellow = "#f6c177"
 blue = "#9ccfd8"
 magenta = "#c4a7e7"
@@ -66,20 +66,10 @@ white = "#e0def4"
 [colors.dim]
 black = "#6e6a86"
 red = "#eb6f92"
-green = "#31748f"
+green = "#3e8fb0"
 yellow = "#f6c177"
 blue = "#9ccfd8"
 magenta = "#c4a7e7"
 cyan = "#ea9a97"
 white = "#e0def4"
 
-[font]
-size = 14.0
-normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
-
-[env]
-WINIT_X11_SCALE_FACTOR = "1.0"
-TERM = "xterm-256color"
-
-[window]
-padding = { x = 0, y = 4 }

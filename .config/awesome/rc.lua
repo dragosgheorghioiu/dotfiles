@@ -116,15 +116,6 @@ myawesomemenu = {
 	},
 }
 
--- mymainmenu = awful.menu({
--- 	items = {
--- 		{ "awesome", myawesomemenu, beautiful.awesome_icon },
--- 		{ "open terminal", terminal },
--- 	},
--- })
---
--- mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon, menu = mymainmenu })
-
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
@@ -296,20 +287,8 @@ awful.screen.connect_for_each_screen(function(s)
 			right = 5,
 			widget = wibox.container.margin,
 		},
-		-- bg = "#ff0000",
 		widget = wibox.container.background,
 	})
-
-	-- local mysystray = {
-	-- 	wibox.widget.systray(),
-	-- 	left = 10,
-	-- 	top = 2,
-	-- 	bottom = 2,
-	-- 	right = 5,
-	-- 	widget = wibox.container.margin,
-	-- }
-
-	-- mysystray:set_base_size(25)
 
 	-- Create the wibox
 	s.mywibox = awful.wibar({ position = "top", screen = s, height = wibar_height })
@@ -353,21 +332,9 @@ awful.screen.connect_for_each_screen(function(s)
 				widget_font = font_string,
 			}),
 			mytextclock,
-			-- s.mylayoutbox,
 		},
 	})
 end)
--- }}}
-
--- -- {{{ Mouse bindings
--- root.buttons(gears.table.join(
--- 	awful.button({}, 3, function()
--- 		mymainmenu:toggle()
--- 	end),
--- 	awful.button({}, 4, awful.tag.viewnext),
--- 	awful.button({}, 5, awful.tag.viewprev)
--- ))
--- -- }}}
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
@@ -382,9 +349,6 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "k", function()
 		awful.client.focus.byidx(-1)
 	end, { description = "focus previous by index", group = "client" }),
-	-- awful.key({ modkey }, "w", function()
-	-- 	mymainmenu:show()
-	-- end, { description = "show main menu", group = "awesome" }),
 
 	-- Layout manipulation
 	awful.key({ modkey, "Shift" }, "j", function()
@@ -481,8 +445,13 @@ globalkeys = gears.table.join(
 		menubar.show()
 	end, { description = "show the menubar", group = "launcher" }),
 	awful.key({ modkey }, "d", function()
-		awful.spawn("rofi -drun-use-desktop-cache -show drun -show-icons")
+		awful.spawn(
+			"rofi -show drun -show-icons -sorting-method fzf -hover-select -me-select-entry '' -me-accept-entry MousePrimary -icon-theme 'ePapirus'"
+		)
 	end, { description = "show the menubar", group = "launcher" }),
+	awful.key({ modkey, "Shift" }, "x", function()
+		awful.spawn("i3lock -c 000000")
+	end, { description = "lockscreen" }),
 	awful.key({ modkey }, "w", function()
 		awful.spawn("rofi -show window -show-icons")
 	end, { description = "show the open windows", group = "launcher" }),
