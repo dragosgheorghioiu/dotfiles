@@ -23,4 +23,4 @@ alias ls='ls --color'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin
