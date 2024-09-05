@@ -22,3 +22,5 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+export PATH=$PATH:$(go env GOPATH)/bin
