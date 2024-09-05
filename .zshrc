@@ -22,7 +22,3 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]]; then
-  exec tmux new-session -A -s main
-fi
