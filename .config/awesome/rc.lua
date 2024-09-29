@@ -394,10 +394,10 @@ globalkeys = gears.table.join(
 	awful.key({ "Shift" }, "Shift_R", function()
 		kbdcfg:next()
 	end),
-	awful.key({ modkey }, "l", function()
+	awful.key({ modkey, "Shift" }, "Right", function()
 		awful.tag.incmwfact(0.05)
 	end, { description = "increase master width factor", group = "layout" }),
-	awful.key({ modkey }, "h", function()
+	awful.key({ modkey, "Shift" }, "Left", function()
 		awful.tag.incmwfact(-0.05)
 	end, { description = "decrease master width factor", group = "layout" }),
 	awful.key({ modkey, "Shift" }, "h", function()
