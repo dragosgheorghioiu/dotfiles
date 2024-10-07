@@ -382,6 +382,9 @@ globalkeys = gears.table.join(
 	awful.key({ modkey, "Shift" }, "q", function()
 		awful.util.spawn_with_shell("rofi -show power-menu -modi power-menu:rofi-power-menu")
 	end, { description = "quit awesome", group = "awesome" }),
+	awful.key({ modkey, "Shift" }, "c", function()
+		awful.util.spawn_with_shell("clipcat-menu")
+	end, { description = "clipboard menu", group = "awesome" }),
 	awful.key({}, "XF86AudioRaiseVolume", function()
 		volumecfg:up()
 	end),
