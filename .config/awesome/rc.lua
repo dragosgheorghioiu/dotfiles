@@ -460,7 +460,7 @@ globalkeys = gears.table.join(
 	end, { description = "show the open windows", group = "launcher" }),
 	awful.key({ modkey }, "Print", function()
 		awful.spawn("flameshot gui")
-	end, { description = "show the menubar", group = "launcher" })
+	end, { description = "flameshot", group = "launcher" })
 )
 
 clientkeys = gears.table.join(

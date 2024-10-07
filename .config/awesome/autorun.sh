@@ -13,5 +13,5 @@ else
 fi
 
 run picom
-run clipcatd
 run nm-applet
+run flameshot
