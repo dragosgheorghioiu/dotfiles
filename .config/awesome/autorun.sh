@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 function run {
-    if ! pgrep $1 ; then
+    if ! pgrep "$1" ; then
         $@&
     fi
 }
@@ -15,3 +15,6 @@ fi
 run picom
 run nm-applet
 run flameshot
+run syncthing
+run xclip
+run emacs --daemon

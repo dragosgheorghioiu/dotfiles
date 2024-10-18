@@ -20,7 +20,14 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 alias ls='ls --color'
+alias neofetch='fastfetch'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin
+export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.ghcup/bin:~/.ghcup/ghc/9.4.8/bin/:~/.config/emacs/bin
+
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
+
+bindkey -v

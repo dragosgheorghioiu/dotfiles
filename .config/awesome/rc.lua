@@ -78,14 +78,14 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
 	-- awful.layout.suit.floating,
-	-- awful.layout.suit.tile,
+	awful.layout.suit.tile,
 	-- awful.layout.suit.tile.left,
 	-- awful.layout.suit.tile.bottom,
 	-- awful.layout.suit.tile.top,
 	-- awful.layout.suit.fair,
 	-- awful.layout.suit.fair.horizontal,
 	-- awful.layout.suit.spiral,
-	awful.layout.suit.spiral.dwindle,
+	-- awful.layout.suit.spiral.dwindle,
 	awful.layout.suit.max,
 	-- awful.layout.suit.max.fullscreen,
 	-- awful.layout.suit.magnifier,
@@ -397,10 +397,10 @@ globalkeys = gears.table.join(
 	awful.key({ "Shift" }, "Shift_R", function()
 		kbdcfg:next()
 	end),
-	awful.key({ modkey, "Shift" }, "Right", function()
+	awful.key({ modkey }, "l", function()
 		awful.tag.incmwfact(0.05)
 	end, { description = "increase master width factor", group = "layout" }),
-	awful.key({ modkey, "Shift" }, "Left", function()
+	awful.key({ modkey }, "h", function()
 		awful.tag.incmwfact(-0.05)
 	end, { description = "decrease master width factor", group = "layout" }),
 	awful.key({ modkey, "Shift" }, "h", function()
