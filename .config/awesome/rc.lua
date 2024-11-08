@@ -1,3 +1,4 @@
+---@diagnostic disable: lowercase-global
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -14,13 +15,12 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
-local battery_widget = require("battery-widget")
-local layout_indicator = require("keyboard-layout-indicator")
-local volume_control = require("volume-control")
 local dpi = beautiful.xresources.apply_dpi
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
+local deficient = require("deficient")
+local battery_widget = deficient.battery_widget
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -61,7 +61,7 @@ local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.ge
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "kitty"
 editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -121,10 +121,10 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
+myreyboardlayout = awful.widget.keyboardlayout()
 
 -- Volume widget
-volumecfg = volume_control({
+volumecfg = deficient.volume_control({
 	font = "JetBrainsMono Nerd Font Propo " .. dpi(14),
 	widget_text = {
 		on = " <span color='#4b6568'></span>% 3d%% ", -- three digits, fill with leading spaces
@@ -132,11 +132,14 @@ volumecfg = volume_control({
 	},
 })
 
+-- instanciate widget:
+screensaver_ctrl = deficient.screensaver({})
+
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
-kbdcfg = layout_indicator({
+kbdcfg = deficient.keyboard_layout_indicator({
 	layouts = {
 		{ name = "us", layout = "us", variant = nil },
 		{ name = "ro", layout = "ro", variant = "std" },
@@ -310,6 +313,7 @@ awful.screen.connect_for_each_screen(function(s)
 			layout = wibox.layout.fixed.horizontal,
 			mysystray,
 			-- kbdcfg.widget,
+			screensaver_ctrl.widget,
 			volumecfg.widget,
 			battery_widget({
 				adapter = "BAT1",

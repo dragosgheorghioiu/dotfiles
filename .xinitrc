@@ -11,53 +11,41 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 if [ -f $sysresources ]; then
 
-
-
-
-
-
-
-    xrdb -merge $sysresources
+  xrdb -merge $sysresources
 
 fi
 
 if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
+  xmodmap $sysmodmap
 fi
 
 if [ -f "$userresources" ]; then
 
-
-
-
-
-
-
-    xrdb -merge "$userresources"
+  xrdb -merge "$userresources"
 
 fi
 
 if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
+  xmodmap "$usermodmap"
 fi
 
-if xrandr --query | grep "HDMI-0 connected"; then
-	xrandr --output HDMI-0 --mode 1920x1080 --rate 144 --pos 0x0 --rotate normal --output DP-0 --off --output DP-1 --off --output eDP-1-1 --primary --mode 1920x1080 --rate 144 --pos 0x1080 --rotate normal --output DP-1-2 --off --output HDMI-1-2 --off
+if xrandr --query | grep "HDMI-1-0 connected"; then
+  xrandr --output eDP1 --rate 144 --mode 1920x1080 --pos 0x1080 --rotate normal --output DP2 --off --output HDMI2 --off --output VIRTUAL1 --off --output HDMI-1-0 --primary --rate 144 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-0 --off --output DP-1-1 --off
 else
-	xrandr --output HDMI-0 --off --output DP-0 --off --output DP-1 --off --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-2 --off --output HDMI-1-2 --off
+  xrandr --output HDMI-0 --off --output DP-0 --off --output DP-1 --off --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-2 --off --output HDMI-1-2 --off
 fi
 
 xset s off
 
 case $wm_choice in
-  1)
-    exec awesome
-    ;;
-  2)
-		exec startxfce4
-    ;;
-	*)
-    echo "Unknown window manager: $wm_choice"
-    exec awesome
-		;;
+1)
+  exec awesome
+  ;;
+2)
+  exec startxfce4
+  ;;
+*)
+  echo "Unknown window manager: $wm_choice"
+  exec awesome
+  ;;
 esac

@@ -1,0 +1,649 @@
+2024-11-08T20:18:11.496Z [Modules] Modules initializing
+2024-11-08T20:18:11.496Z [Modules] Distribution: remote
+2024-11-08T20:18:11.496Z [Modules] Host updates: enabled
+2024-11-08T20:18:11.497Z [Modules] Module updates: enabled
+2024-11-08T20:18:11.497Z [Modules] Module install path: /home/dregos/.config/discord/0.0.73/modules
+2024-11-08T20:18:11.497Z [Modules] Module installed file path: /home/dregos/.config/discord/0.0.73/modules/installed.json
+2024-11-08T20:18:11.497Z [Modules] Module download path: /home/dregos/.config/discord/0.0.73/modules/pending
+2024-11-08T20:18:11.790Z [Modules] Bootstrapping...
+2024-11-08T20:18:11.792Z [Modules] Installing discord_desktop_core@0 from /opt/discord/resources/bootstrap/discord_desktop_core.zip
+2024-11-08T20:18:11.795Z [Modules] Failed installing discord_desktop_core@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_desktop_core.zip'
+2024-11-08T20:18:11.796Z [Modules] Installing discord_erlpack@0 from /opt/discord/resources/bootstrap/discord_erlpack.zip
+2024-11-08T20:18:11.797Z [Modules] Failed installing discord_erlpack@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_erlpack.zip'
+2024-11-08T20:18:11.797Z [Modules] Installing discord_spellcheck@0 from /opt/discord/resources/bootstrap/discord_spellcheck.zip
+2024-11-08T20:18:11.797Z [Modules] Failed installing discord_spellcheck@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_spellcheck.zip'
+2024-11-08T20:18:11.798Z [Modules] Installing discord_utils@0 from /opt/discord/resources/bootstrap/discord_utils.zip
+2024-11-08T20:18:11.798Z [Modules] Failed installing discord_utils@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_utils.zip'
+2024-11-08T20:18:11.799Z [Modules] Installing discord_voice@0 from /opt/discord/resources/bootstrap/discord_voice.zip
+2024-11-08T20:18:11.799Z [Modules] Failed installing discord_voice@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_voice.zip'
+2024-11-08T20:18:11.800Z [Modules] Installing discord_zstd@0 from /opt/discord/resources/bootstrap/discord_zstd.zip
+2024-11-08T20:18:11.801Z [Modules] Failed installing discord_zstd@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_zstd.zip'
+2024-11-08T20:18:11.802Z [Modules] Finished module installations. [success: 0] [failure: 6]
+2024-11-08T20:18:11.803Z [Modules] Checking for host updates.
+2024-11-08T20:18:12.092Z [Modules] Host is up to date.
+2024-11-08T20:18:12.093Z [Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+2024-11-08T20:18:12.151Z [Modules] Module update available: discord_desktop_core@1 [installed: 0]
+2024-11-08T20:18:12.151Z [Modules] Module update available: discord_erlpack@1 [installed: 0]
+2024-11-08T20:18:12.151Z [Modules] Module update available: discord_spellcheck@1 [installed: 0]
+2024-11-08T20:18:12.152Z [Modules] Module update available: discord_utils@1 [installed: 0]
+2024-11-08T20:18:12.152Z [Modules] Module update available: discord_voice@1 [installed: 0]
+2024-11-08T20:18:12.152Z [Modules] Module update available: discord_zstd@1 [installed: 0]
+2024-11-08T20:18:12.154Z [Modules] Fetching discord_desktop_core@1 from https://discord.com/api/modules/stable/discord_desktop_core/1
+2024-11-08T20:18:12.154Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip
+2024-11-08T20:18:12.689Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 1%
+2024-11-08T20:18:12.700Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 2%
+2024-11-08T20:18:12.720Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 3%
+2024-11-08T20:18:12.727Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 4%
+2024-11-08T20:18:12.793Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 5%
+2024-11-08T20:18:12.799Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 6%
+2024-11-08T20:18:12.804Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 7%
+2024-11-08T20:18:12.818Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 8%
+2024-11-08T20:18:12.876Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 9%
+2024-11-08T20:18:12.892Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 10%
+2024-11-08T20:18:12.904Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 11%
+2024-11-08T20:18:12.909Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 12%
+2024-11-08T20:18:12.921Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 13%
+2024-11-08T20:18:12.929Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 14%
+2024-11-08T20:18:12.946Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 15%
+2024-11-08T20:18:12.966Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 16%
+2024-11-08T20:18:12.971Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 17%
+2024-11-08T20:18:13.014Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 18%
+2024-11-08T20:18:13.020Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 19%
+2024-11-08T20:18:13.041Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 20%
+2024-11-08T20:18:13.059Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 21%
+2024-11-08T20:18:13.146Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 22%
+2024-11-08T20:18:13.159Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 23%
+2024-11-08T20:18:13.169Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 24%
+2024-11-08T20:18:13.192Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 25%
+2024-11-08T20:18:13.197Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 26%
+2024-11-08T20:18:13.204Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 27%
+2024-11-08T20:18:13.215Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 28%
+2024-11-08T20:18:13.222Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 29%
+2024-11-08T20:18:13.233Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 30%
+2024-11-08T20:18:13.239Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 31%
+2024-11-08T20:18:13.245Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 32%
+2024-11-08T20:18:13.253Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 33%
+2024-11-08T20:18:13.259Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 34%
+2024-11-08T20:18:13.269Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 35%
+2024-11-08T20:18:13.275Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 36%
+2024-11-08T20:18:13.279Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 37%
+2024-11-08T20:18:13.290Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 38%
+2024-11-08T20:18:13.296Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 39%
+2024-11-08T20:18:13.302Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 40%
+2024-11-08T20:18:13.310Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 41%
+2024-11-08T20:18:13.313Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 42%
+2024-11-08T20:18:13.332Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 43%
+2024-11-08T20:18:13.333Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 44%
+2024-11-08T20:18:13.340Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 45%
+2024-11-08T20:18:13.343Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 46%
+2024-11-08T20:18:13.358Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 47%
+2024-11-08T20:18:13.368Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 48%
+2024-11-08T20:18:13.390Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 49%
+2024-11-08T20:18:13.398Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 50%
+2024-11-08T20:18:13.405Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 51%
+2024-11-08T20:18:13.407Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 52%
+2024-11-08T20:18:13.418Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 53%
+2024-11-08T20:18:13.421Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 54%
+2024-11-08T20:18:13.432Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 55%
+2024-11-08T20:18:13.434Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 56%
+2024-11-08T20:18:13.439Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 57%
+2024-11-08T20:18:13.449Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 58%
+2024-11-08T20:18:13.453Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 59%
+2024-11-08T20:18:13.472Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 60%
+2024-11-08T20:18:13.526Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 61%
+2024-11-08T20:18:13.529Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 62%
+2024-11-08T20:18:13.536Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 63%
+2024-11-08T20:18:13.541Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 66%
+2024-11-08T20:18:13.548Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 69%
+2024-11-08T20:18:13.555Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 72%
+2024-11-08T20:18:13.559Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 75%
+2024-11-08T20:18:13.560Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 76%
+2024-11-08T20:18:13.564Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 79%
+2024-11-08T20:18:13.567Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 82%
+2024-11-08T20:18:13.571Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 84%
+2024-11-08T20:18:13.578Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 87%
+2024-11-08T20:18:13.582Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 89%
+2024-11-08T20:18:13.583Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 90%
+2024-11-08T20:18:13.592Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 91%
+2024-11-08T20:18:13.594Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 92%
+2024-11-08T20:18:13.597Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 93%
+2024-11-08T20:18:13.608Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 94%
+2024-11-08T20:18:13.611Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 95%
+2024-11-08T20:18:13.615Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 97%
+2024-11-08T20:18:13.618Z [Modules] Streaming discord_desktop_core@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip: 100%
+2024-11-08T20:18:13.620Z [Modules] Fetching discord_erlpack@1 from https://discord.com/api/modules/stable/discord_erlpack/1
+2024-11-08T20:18:13.621Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip
+2024-11-08T20:18:13.829Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 1%
+2024-11-08T20:18:13.835Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 3%
+2024-11-08T20:18:13.843Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 4%
+2024-11-08T20:18:13.846Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 5%
+2024-11-08T20:18:13.848Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 6%
+2024-11-08T20:18:13.857Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 7%
+2024-11-08T20:18:13.860Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 8%
+2024-11-08T20:18:13.864Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 9%
+2024-11-08T20:18:13.869Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 10%
+2024-11-08T20:18:13.873Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 11%
+2024-11-08T20:18:13.875Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 12%
+2024-11-08T20:18:13.881Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 13%
+2024-11-08T20:18:13.883Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 14%
+2024-11-08T20:18:13.887Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 15%
+2024-11-08T20:18:13.897Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 17%
+2024-11-08T20:18:13.900Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 18%
+2024-11-08T20:18:13.907Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 19%
+2024-11-08T20:18:13.909Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 20%
+2024-11-08T20:18:13.913Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 21%
+2024-11-08T20:18:13.921Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 22%
+2024-11-08T20:18:13.923Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 23%
+2024-11-08T20:18:13.926Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 24%
+2024-11-08T20:18:13.932Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 25%
+2024-11-08T20:18:13.936Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 26%
+2024-11-08T20:18:13.937Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 27%
+2024-11-08T20:18:13.944Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 28%
+2024-11-08T20:18:13.946Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 29%
+2024-11-08T20:18:13.949Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 30%
+2024-11-08T20:18:13.952Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 31%
+2024-11-08T20:18:13.957Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 32%
+2024-11-08T20:18:13.959Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 33%
+2024-11-08T20:18:13.964Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 34%
+2024-11-08T20:18:13.971Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 35%
+2024-11-08T20:18:13.974Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 36%
+2024-11-08T20:18:13.979Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 37%
+2024-11-08T20:18:13.984Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 38%
+2024-11-08T20:18:13.986Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 39%
+2024-11-08T20:18:13.988Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 40%
+2024-11-08T20:18:13.993Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 41%
+2024-11-08T20:18:13.999Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 43%
+2024-11-08T20:18:14.005Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 44%
+2024-11-08T20:18:14.007Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 45%
+2024-11-08T20:18:14.009Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 46%
+2024-11-08T20:18:14.015Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 47%
+2024-11-08T20:18:14.018Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 48%
+2024-11-08T20:18:14.020Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 49%
+2024-11-08T20:18:14.026Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 50%
+2024-11-08T20:18:14.028Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 51%
+2024-11-08T20:18:14.030Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 52%
+2024-11-08T20:18:14.036Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 53%
+2024-11-08T20:18:14.039Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 54%
+2024-11-08T20:18:14.041Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 55%
+2024-11-08T20:18:14.047Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 56%
+2024-11-08T20:18:14.049Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 57%
+2024-11-08T20:18:14.053Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 58%
+2024-11-08T20:18:14.057Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 59%
+2024-11-08T20:18:14.060Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 60%
+2024-11-08T20:18:14.062Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 61%
+2024-11-08T20:18:14.064Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 62%
+2024-11-08T20:18:14.070Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 63%
+2024-11-08T20:18:14.072Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 64%
+2024-11-08T20:18:14.076Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 65%
+2024-11-08T20:18:14.079Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 66%
+2024-11-08T20:18:14.083Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 67%
+2024-11-08T20:18:14.085Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 68%
+2024-11-08T20:18:14.089Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 69%
+2024-11-08T20:18:14.091Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 70%
+2024-11-08T20:18:14.095Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 71%
+2024-11-08T20:18:14.097Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 72%
+2024-11-08T20:18:14.102Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 73%
+2024-11-08T20:18:14.104Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 74%
+2024-11-08T20:18:14.110Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 75%
+2024-11-08T20:18:14.112Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 76%
+2024-11-08T20:18:14.115Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 77%
+2024-11-08T20:18:14.119Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 78%
+2024-11-08T20:18:14.122Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 79%
+2024-11-08T20:18:14.124Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 80%
+2024-11-08T20:18:14.127Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 81%
+2024-11-08T20:18:14.130Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 82%
+2024-11-08T20:18:14.132Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 83%
+2024-11-08T20:18:14.137Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 84%
+2024-11-08T20:18:14.139Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 85%
+2024-11-08T20:18:14.141Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 86%
+2024-11-08T20:18:14.143Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 87%
+2024-11-08T20:18:14.150Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 89%
+2024-11-08T20:18:14.153Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 90%
+2024-11-08T20:18:14.157Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 91%
+2024-11-08T20:18:14.159Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 92%
+2024-11-08T20:18:14.161Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 93%
+2024-11-08T20:18:14.168Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 95%
+2024-11-08T20:18:14.173Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 96%
+2024-11-08T20:18:14.174Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 97%
+2024-11-08T20:18:14.177Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 98%
+2024-11-08T20:18:14.180Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 99%
+2024-11-08T20:18:14.181Z [Modules] Streaming discord_erlpack@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip: 100%
+2024-11-08T20:18:14.182Z [Modules] Fetching discord_spellcheck@1 from https://discord.com/api/modules/stable/discord_spellcheck/1
+2024-11-08T20:18:14.183Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip
+2024-11-08T20:18:14.474Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 1%
+2024-11-08T20:18:14.497Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 2%
+2024-11-08T20:18:14.506Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 3%
+2024-11-08T20:18:14.525Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 4%
+2024-11-08T20:18:14.531Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 5%
+2024-11-08T20:18:14.540Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 6%
+2024-11-08T20:18:14.554Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 7%
+2024-11-08T20:18:14.559Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 8%
+2024-11-08T20:18:14.569Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 9%
+2024-11-08T20:18:14.572Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 10%
+2024-11-08T20:18:14.606Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 11%
+2024-11-08T20:18:14.612Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 12%
+2024-11-08T20:18:14.624Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 13%
+2024-11-08T20:18:14.638Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 14%
+2024-11-08T20:18:14.642Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 15%
+2024-11-08T20:18:14.669Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 16%
+2024-11-08T20:18:14.726Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 17%
+2024-11-08T20:18:14.736Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 18%
+2024-11-08T20:18:14.746Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 19%
+2024-11-08T20:18:14.753Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 20%
+2024-11-08T20:18:14.763Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 21%
+2024-11-08T20:18:14.794Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 22%
+2024-11-08T20:18:14.804Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 23%
+2024-11-08T20:18:14.813Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 24%
+2024-11-08T20:18:14.818Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 25%
+2024-11-08T20:18:14.832Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 26%
+2024-11-08T20:18:14.843Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 27%
+2024-11-08T20:18:14.848Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 28%
+2024-11-08T20:18:14.858Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 29%
+2024-11-08T20:18:14.862Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 30%
+2024-11-08T20:18:14.872Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 31%
+2024-11-08T20:18:14.889Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 32%
+2024-11-08T20:18:14.898Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 33%
+2024-11-08T20:18:14.903Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 34%
+2024-11-08T20:18:14.916Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 35%
+2024-11-08T20:18:14.930Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 36%
+2024-11-08T20:18:14.938Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 37%
+2024-11-08T20:18:14.957Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 38%
+2024-11-08T20:18:14.962Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 39%
+2024-11-08T20:18:14.976Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 40%
+2024-11-08T20:18:14.981Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 41%
+2024-11-08T20:18:14.988Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 42%
+2024-11-08T20:18:14.996Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 43%
+2024-11-08T20:18:15.000Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 44%
+2024-11-08T20:18:15.033Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 45%
+2024-11-08T20:18:15.040Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 46%
+2024-11-08T20:18:15.050Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 47%
+2024-11-08T20:18:15.057Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 48%
+2024-11-08T20:18:15.064Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 49%
+2024-11-08T20:18:15.073Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 50%
+2024-11-08T20:18:15.081Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 51%
+2024-11-08T20:18:15.092Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 52%
+2024-11-08T20:18:15.098Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 53%
+2024-11-08T20:18:15.107Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 54%
+2024-11-08T20:18:15.113Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 55%
+2024-11-08T20:18:15.125Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 56%
+2024-11-08T20:18:15.130Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 57%
+2024-11-08T20:18:15.136Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 58%
+2024-11-08T20:18:15.144Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 59%
+2024-11-08T20:18:15.150Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 60%
+2024-11-08T20:18:15.159Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 61%
+2024-11-08T20:18:15.167Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 62%
+2024-11-08T20:18:15.174Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 63%
+2024-11-08T20:18:15.183Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 64%
+2024-11-08T20:18:15.186Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 65%
+2024-11-08T20:18:15.194Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 66%
+2024-11-08T20:18:15.201Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 67%
+2024-11-08T20:18:15.210Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 68%
+2024-11-08T20:18:15.213Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 69%
+2024-11-08T20:18:15.221Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 70%
+2024-11-08T20:18:15.229Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 71%
+2024-11-08T20:18:15.234Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 72%
+2024-11-08T20:18:15.239Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 73%
+2024-11-08T20:18:15.248Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 74%
+2024-11-08T20:18:15.253Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 75%
+2024-11-08T20:18:15.259Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 76%
+2024-11-08T20:18:15.266Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 77%
+2024-11-08T20:18:15.274Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 78%
+2024-11-08T20:18:15.279Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 79%
+2024-11-08T20:18:15.284Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 80%
+2024-11-08T20:18:15.292Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 81%
+2024-11-08T20:18:15.299Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 82%
+2024-11-08T20:18:15.307Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 83%
+2024-11-08T20:18:15.313Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 84%
+2024-11-08T20:18:15.320Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 85%
+2024-11-08T20:18:15.325Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 86%
+2024-11-08T20:18:15.334Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 87%
+2024-11-08T20:18:15.363Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 88%
+2024-11-08T20:18:15.372Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 89%
+2024-11-08T20:18:15.377Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 90%
+2024-11-08T20:18:15.384Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 91%
+2024-11-08T20:18:15.389Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 92%
+2024-11-08T20:18:15.396Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 93%
+2024-11-08T20:18:15.402Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 94%
+2024-11-08T20:18:15.410Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 95%
+2024-11-08T20:18:15.415Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 96%
+2024-11-08T20:18:15.421Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 97%
+2024-11-08T20:18:15.432Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 98%
+2024-11-08T20:18:15.437Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 99%
+2024-11-08T20:18:15.441Z [Modules] Streaming discord_spellcheck@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip: 100%
+2024-11-08T20:18:15.445Z [Modules] Fetching discord_utils@1 from https://discord.com/api/modules/stable/discord_utils/1
+2024-11-08T20:18:15.446Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip
+2024-11-08T20:18:15.674Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 1%
+2024-11-08T20:18:15.677Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 3%
+2024-11-08T20:18:15.680Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 4%
+2024-11-08T20:18:15.682Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 6%
+2024-11-08T20:18:15.687Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 7%
+2024-11-08T20:18:15.690Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 8%
+2024-11-08T20:18:15.699Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 9%
+2024-11-08T20:18:15.702Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 11%
+2024-11-08T20:18:15.707Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 13%
+2024-11-08T20:18:15.711Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 14%
+2024-11-08T20:18:15.714Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 16%
+2024-11-08T20:18:15.718Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 18%
+2024-11-08T20:18:15.722Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 19%
+2024-11-08T20:18:15.724Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 21%
+2024-11-08T20:18:15.735Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 22%
+2024-11-08T20:18:15.739Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 26%
+2024-11-08T20:18:15.742Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 27%
+2024-11-08T20:18:15.750Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 28%
+2024-11-08T20:18:15.752Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 30%
+2024-11-08T20:18:15.757Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 31%
+2024-11-08T20:18:15.759Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 33%
+2024-11-08T20:18:15.764Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 34%
+2024-11-08T20:18:15.765Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 36%
+2024-11-08T20:18:15.767Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 37%
+2024-11-08T20:18:15.771Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 39%
+2024-11-08T20:18:15.772Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 40%
+2024-11-08T20:18:15.773Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 41%
+2024-11-08T20:18:15.774Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 42%
+2024-11-08T20:18:15.776Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 43%
+2024-11-08T20:18:15.780Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 44%
+2024-11-08T20:18:15.783Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 45%
+2024-11-08T20:18:15.786Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 46%
+2024-11-08T20:18:15.788Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 47%
+2024-11-08T20:18:15.791Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 48%
+2024-11-08T20:18:15.793Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 49%
+2024-11-08T20:18:15.795Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 50%
+2024-11-08T20:18:15.799Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 51%
+2024-11-08T20:18:15.800Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 52%
+2024-11-08T20:18:15.803Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 53%
+2024-11-08T20:18:15.807Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 54%
+2024-11-08T20:18:15.809Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 55%
+2024-11-08T20:18:15.812Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 56%
+2024-11-08T20:18:15.815Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 57%
+2024-11-08T20:18:15.819Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 58%
+2024-11-08T20:18:15.825Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 59%
+2024-11-08T20:18:15.827Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 60%
+2024-11-08T20:18:15.833Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 61%
+2024-11-08T20:18:15.842Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 62%
+2024-11-08T20:18:15.847Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 63%
+2024-11-08T20:18:15.854Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 64%
+2024-11-08T20:18:15.860Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 65%
+2024-11-08T20:18:15.867Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 66%
+2024-11-08T20:18:15.873Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 67%
+2024-11-08T20:18:15.878Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 68%
+2024-11-08T20:18:15.883Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 69%
+2024-11-08T20:18:15.887Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 70%
+2024-11-08T20:18:15.891Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 71%
+2024-11-08T20:18:15.896Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 72%
+2024-11-08T20:18:15.900Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 73%
+2024-11-08T20:18:15.902Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 74%
+2024-11-08T20:18:15.908Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 75%
+2024-11-08T20:18:15.910Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 76%
+2024-11-08T20:18:15.914Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 77%
+2024-11-08T20:18:15.917Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 78%
+2024-11-08T20:18:15.919Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 79%
+2024-11-08T20:18:15.923Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 80%
+2024-11-08T20:18:15.925Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 81%
+2024-11-08T20:18:15.929Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 82%
+2024-11-08T20:18:15.932Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 83%
+2024-11-08T20:18:15.936Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 84%
+2024-11-08T20:18:15.938Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 85%
+2024-11-08T20:18:15.941Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 86%
+2024-11-08T20:18:15.947Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 87%
+2024-11-08T20:18:15.950Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 88%
+2024-11-08T20:18:15.953Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 89%
+2024-11-08T20:18:15.957Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 90%
+2024-11-08T20:18:15.959Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 91%
+2024-11-08T20:18:15.963Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 92%
+2024-11-08T20:18:15.973Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 93%
+2024-11-08T20:18:15.976Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 94%
+2024-11-08T20:18:15.979Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 95%
+2024-11-08T20:18:15.981Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 96%
+2024-11-08T20:18:15.985Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 97%
+2024-11-08T20:18:15.987Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 98%
+2024-11-08T20:18:15.991Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 99%
+2024-11-08T20:18:15.993Z [Modules] Streaming discord_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip: 100%
+2024-11-08T20:18:15.995Z [Modules] Fetching discord_voice@1 from https://discord.com/api/modules/stable/discord_voice/1
+2024-11-08T20:18:15.995Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip
+2024-11-08T20:18:16.322Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 1%
+2024-11-08T20:18:16.344Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 2%
+2024-11-08T20:18:16.372Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 3%
+2024-11-08T20:18:16.392Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 4%
+2024-11-08T20:18:16.430Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 5%
+2024-11-08T20:18:16.450Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 6%
+2024-11-08T20:18:16.480Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 7%
+2024-11-08T20:18:16.499Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 8%
+2024-11-08T20:18:16.520Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 9%
+2024-11-08T20:18:16.537Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 10%
+2024-11-08T20:18:16.558Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 11%
+2024-11-08T20:18:16.578Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 12%
+2024-11-08T20:18:16.601Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 13%
+2024-11-08T20:18:16.618Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 14%
+2024-11-08T20:18:16.636Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 15%
+2024-11-08T20:18:16.654Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 16%
+2024-11-08T20:18:16.677Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 17%
+2024-11-08T20:18:16.696Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 18%
+2024-11-08T20:18:16.745Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 19%
+2024-11-08T20:18:16.769Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 20%
+2024-11-08T20:18:16.791Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 21%
+2024-11-08T20:18:16.812Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 22%
+2024-11-08T20:18:16.831Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 23%
+2024-11-08T20:18:16.850Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 24%
+2024-11-08T20:18:16.870Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 25%
+2024-11-08T20:18:16.895Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 26%
+2024-11-08T20:18:16.919Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 27%
+2024-11-08T20:18:16.936Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 28%
+2024-11-08T20:18:16.955Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 29%
+2024-11-08T20:18:16.975Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 30%
+2024-11-08T20:18:16.998Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 31%
+2024-11-08T20:18:17.019Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 32%
+2024-11-08T20:18:17.037Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 33%
+2024-11-08T20:18:17.061Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 34%
+2024-11-08T20:18:17.091Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 35%
+2024-11-08T20:18:17.110Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 36%
+2024-11-08T20:18:17.131Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 37%
+2024-11-08T20:18:17.147Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 38%
+2024-11-08T20:18:17.162Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 39%
+2024-11-08T20:18:17.181Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 40%
+2024-11-08T20:18:17.198Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 41%
+2024-11-08T20:18:17.211Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 42%
+2024-11-08T20:18:17.225Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 43%
+2024-11-08T20:18:17.245Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 44%
+2024-11-08T20:18:17.265Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 45%
+2024-11-08T20:18:17.306Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 46%
+2024-11-08T20:18:17.322Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 47%
+2024-11-08T20:18:17.374Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 48%
+2024-11-08T20:18:17.399Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 49%
+2024-11-08T20:18:17.417Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 50%
+2024-11-08T20:18:17.435Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 51%
+2024-11-08T20:18:17.502Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 52%
+2024-11-08T20:18:17.538Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 53%
+2024-11-08T20:18:17.606Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 54%
+2024-11-08T20:18:17.632Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 55%
+2024-11-08T20:18:17.676Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 56%
+2024-11-08T20:18:17.713Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 57%
+2024-11-08T20:18:17.752Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 58%
+2024-11-08T20:18:17.790Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 59%
+2024-11-08T20:18:17.826Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 60%
+2024-11-08T20:18:17.843Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 61%
+2024-11-08T20:18:17.858Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 62%
+2024-11-08T20:18:17.877Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 63%
+2024-11-08T20:18:17.893Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 64%
+2024-11-08T20:18:17.909Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 65%
+2024-11-08T20:18:17.931Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 66%
+2024-11-08T20:18:17.944Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 67%
+2024-11-08T20:18:17.959Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 68%
+2024-11-08T20:18:17.967Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 69%
+2024-11-08T20:18:17.980Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 70%
+2024-11-08T20:18:17.998Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 71%
+2024-11-08T20:18:18.013Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 72%
+2024-11-08T20:18:18.031Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 73%
+2024-11-08T20:18:18.048Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 74%
+2024-11-08T20:18:18.087Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 75%
+2024-11-08T20:18:18.104Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 76%
+2024-11-08T20:18:18.120Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 77%
+2024-11-08T20:18:18.136Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 78%
+2024-11-08T20:18:18.153Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 79%
+2024-11-08T20:18:18.170Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 80%
+2024-11-08T20:18:18.190Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 81%
+2024-11-08T20:18:18.212Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 82%
+2024-11-08T20:18:18.245Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 83%
+2024-11-08T20:18:18.265Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 84%
+2024-11-08T20:18:18.277Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 85%
+2024-11-08T20:18:18.302Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 86%
+2024-11-08T20:18:18.323Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 87%
+2024-11-08T20:18:18.343Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 88%
+2024-11-08T20:18:18.354Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 89%
+2024-11-08T20:18:18.368Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 90%
+2024-11-08T20:18:18.383Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 91%
+2024-11-08T20:18:18.404Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 92%
+2024-11-08T20:18:18.420Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 93%
+2024-11-08T20:18:18.435Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 94%
+2024-11-08T20:18:18.452Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 95%
+2024-11-08T20:18:18.465Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 96%
+2024-11-08T20:18:18.481Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 97%
+2024-11-08T20:18:18.501Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 98%
+2024-11-08T20:18:18.522Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 99%
+2024-11-08T20:18:18.537Z [Modules] Streaming discord_voice@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip: 100%
+2024-11-08T20:18:18.543Z [Modules] Fetching discord_zstd@1 from https://discord.com/api/modules/stable/discord_zstd/1
+2024-11-08T20:18:18.543Z [Modules] Streaming discord_zstd@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_zstd-1.zip
+2024-11-08T20:18:19.537Z [Modules] Streaming discord_zstd@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_zstd-1.zip: 5%
+2024-11-08T20:18:19.543Z [Modules] Streaming discord_zstd@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_zstd-1.zip: 34%
+2024-11-08T20:18:19.545Z [Modules] Streaming discord_zstd@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_zstd-1.zip: 40%
+2024-11-08T20:18:19.549Z [Modules] Streaming discord_zstd@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_zstd-1.zip: 49%
+2024-11-08T20:18:19.555Z [Modules] Streaming discord_zstd@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_zstd-1.zip: 66%
+2024-11-08T20:18:19.558Z [Modules] Streaming discord_zstd@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_zstd-1.zip: 93%
+2024-11-08T20:18:19.560Z [Modules] Streaming discord_zstd@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_zstd-1.zip: 100%
+2024-11-08T20:18:19.562Z [Modules] Finished module downloads. [success: 6] [failure: 0]
+2024-11-08T20:18:19.563Z [Modules] Installing updates...
+2024-11-08T20:18:19.563Z [Modules] Installing discord_desktop_core@1 from /home/dregos/.config/discord/0.0.73/modules/pending/discord_desktop_core-1.zip
+2024-11-08T20:18:19.671Z [Modules] Installing discord_erlpack@1 from /home/dregos/.config/discord/0.0.73/modules/pending/discord_erlpack-1.zip
+2024-11-08T20:18:19.742Z [Modules] Installing discord_spellcheck@1 from /home/dregos/.config/discord/0.0.73/modules/pending/discord_spellcheck-1.zip
+2024-11-08T20:18:20.900Z [Modules] Installing discord_utils@1 from /home/dregos/.config/discord/0.0.73/modules/pending/discord_utils-1.zip
+2024-11-08T20:18:21.099Z [Modules] Installing discord_voice@1 from /home/dregos/.config/discord/0.0.73/modules/pending/discord_voice-1.zip
+2024-11-08T20:18:21.717Z [Modules] Installing discord_zstd@1 from /home/dregos/.config/discord/0.0.73/modules/pending/discord_zstd-1.zip
+2024-11-08T20:18:21.731Z [Modules] Finished module installations. [success: 6] [failure: 0]
+2024-11-08T20:18:21.731Z [Modules] Checking for host updates.
+2024-11-08T20:18:21.933Z [Modules] Host is up to date.
+2024-11-08T20:18:21.934Z [Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+2024-11-08T20:18:21.943Z [Modules] No module updates available.
+2024-11-08T20:18:23.396Z [Modules] Starting to install discord_krisp...
+2024-11-08T20:18:23.397Z [Modules] Fetching discord_krisp@1 from https://discord.com/api/modules/stable/discord_krisp/1
+2024-11-08T20:18:23.397Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip
+2024-11-08T20:18:23.410Z [Modules] Starting to install discord_game_utils...
+2024-11-08T20:18:23.608Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 1%
+2024-11-08T20:18:23.628Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 2%
+2024-11-08T20:18:23.644Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 3%
+2024-11-08T20:18:23.667Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 4%
+2024-11-08T20:18:23.679Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 5%
+2024-11-08T20:18:23.695Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 6%
+2024-11-08T20:18:23.714Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 7%
+2024-11-08T20:18:23.733Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 8%
+2024-11-08T20:18:23.747Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 9%
+2024-11-08T20:18:23.763Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 10%
+2024-11-08T20:18:23.778Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 11%
+2024-11-08T20:18:23.794Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 12%
+2024-11-08T20:18:23.808Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 13%
+2024-11-08T20:18:23.821Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 14%
+2024-11-08T20:18:23.934Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 15%
+2024-11-08T20:18:23.950Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 16%
+2024-11-08T20:18:23.971Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 17%
+2024-11-08T20:18:23.997Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 18%
+2024-11-08T20:18:24.029Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 19%
+2024-11-08T20:18:24.063Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 20%
+2024-11-08T20:18:24.078Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 21%
+2024-11-08T20:18:24.088Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 22%
+2024-11-08T20:18:24.103Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 23%
+2024-11-08T20:18:24.123Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 24%
+2024-11-08T20:18:24.138Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 25%
+2024-11-08T20:18:24.154Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 26%
+2024-11-08T20:18:24.168Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 27%
+2024-11-08T20:18:24.242Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 28%
+2024-11-08T20:18:24.262Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 29%
+2024-11-08T20:18:24.280Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 30%
+2024-11-08T20:18:24.301Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 31%
+2024-11-08T20:18:24.533Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 32%
+2024-11-08T20:18:24.541Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 33%
+2024-11-08T20:18:24.543Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 34%
+2024-11-08T20:18:24.544Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 35%
+2024-11-08T20:18:24.545Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 36%
+2024-11-08T20:18:24.626Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 37%
+2024-11-08T20:18:24.628Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 38%
+2024-11-08T20:18:24.629Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 39%
+2024-11-08T20:18:24.631Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 40%
+2024-11-08T20:18:24.632Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 41%
+2024-11-08T20:18:24.634Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 42%
+2024-11-08T20:18:24.638Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 43%
+2024-11-08T20:18:24.657Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 44%
+2024-11-08T20:18:24.671Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 45%
+2024-11-08T20:18:24.692Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 46%
+2024-11-08T20:18:24.702Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 47%
+2024-11-08T20:18:24.719Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 48%
+2024-11-08T20:18:24.850Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 49%
+2024-11-08T20:18:24.916Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 50%
+2024-11-08T20:18:24.933Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 51%
+2024-11-08T20:18:24.958Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 52%
+2024-11-08T20:18:24.963Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 53%
+2024-11-08T20:18:24.964Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 54%
+2024-11-08T20:18:24.980Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 55%
+2024-11-08T20:18:25.016Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 56%
+2024-11-08T20:18:25.017Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 57%
+2024-11-08T20:18:25.032Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 58%
+2024-11-08T20:18:25.050Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 59%
+2024-11-08T20:18:25.068Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 60%
+2024-11-08T20:18:25.081Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 61%
+2024-11-08T20:18:25.095Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 62%
+2024-11-08T20:18:25.112Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 63%
+2024-11-08T20:18:25.127Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 64%
+2024-11-08T20:18:25.149Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 65%
+2024-11-08T20:18:25.170Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 66%
+2024-11-08T20:18:25.183Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 67%
+2024-11-08T20:18:25.196Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 68%
+2024-11-08T20:18:25.214Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 69%
+2024-11-08T20:18:25.231Z [Modules] Checking for host updates.
+2024-11-08T20:18:25.253Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 70%
+2024-11-08T20:18:25.273Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 71%
+2024-11-08T20:18:25.290Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 72%
+2024-11-08T20:18:25.308Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 73%
+2024-11-08T20:18:25.322Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 74%
+2024-11-08T20:18:25.336Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 75%
+2024-11-08T20:18:25.351Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 76%
+2024-11-08T20:18:25.372Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 77%
+2024-11-08T20:18:25.390Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 78%
+2024-11-08T20:18:25.403Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 79%
+2024-11-08T20:18:25.409Z [Modules] Starting to install discord_rpc...
+2024-11-08T20:18:25.428Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 80%
+2024-11-08T20:18:25.443Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 81%
+2024-11-08T20:18:25.445Z [Modules] Host is up to date.
+2024-11-08T20:18:25.446Z [Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+2024-11-08T20:18:25.453Z [Modules] No module updates available.
+2024-11-08T20:18:25.455Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 82%
+2024-11-08T20:18:25.472Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 83%
+2024-11-08T20:18:25.486Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 84%
+2024-11-08T20:18:25.500Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 85%
+2024-11-08T20:18:25.517Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 86%
+2024-11-08T20:18:25.535Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 87%
+2024-11-08T20:18:25.550Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 88%
+2024-11-08T20:18:25.564Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 89%
+2024-11-08T20:18:25.581Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 90%
+2024-11-08T20:18:25.627Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 91%
+2024-11-08T20:18:25.648Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 92%
+2024-11-08T20:18:25.658Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 93%
+2024-11-08T20:18:25.677Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 94%
+2024-11-08T20:18:25.692Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 95%
+2024-11-08T20:18:25.709Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 96%
+2024-11-08T20:18:25.728Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 97%
+2024-11-08T20:18:25.741Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 98%
+2024-11-08T20:18:25.818Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 99%
+2024-11-08T20:18:25.829Z [Modules] Streaming discord_krisp@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip: 100%
+2024-11-08T20:18:25.833Z [Modules] Fetching discord_game_utils@1 from https://discord.com/api/modules/stable/discord_game_utils/1
+2024-11-08T20:18:25.833Z [Modules] Streaming discord_game_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_game_utils-1.zip
+2024-11-08T20:18:25.833Z [Modules] Installing discord_krisp@1 from /home/dregos/.config/discord/0.0.73/modules/pending/discord_krisp-1.zip
+2024-11-08T20:18:26.760Z [Modules] Streaming discord_game_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_game_utils-1.zip: 75%
+2024-11-08T20:18:26.770Z [Modules] Streaming discord_game_utils@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_game_utils-1.zip: 100%
+2024-11-08T20:18:26.777Z [Modules] Fetching discord_rpc@1 from https://discord.com/api/modules/stable/discord_rpc/1
+2024-11-08T20:18:26.777Z [Modules] Streaming discord_rpc@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_rpc-1.zip
+2024-11-08T20:18:26.978Z [Modules] Streaming discord_rpc@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_rpc-1.zip: 8%
+2024-11-08T20:18:26.979Z [Modules] Streaming discord_rpc@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_rpc-1.zip: 69%
+2024-11-08T20:18:26.979Z [Modules] Streaming discord_rpc@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_rpc-1.zip: 81%
+2024-11-08T20:18:26.980Z [Modules] Streaming discord_rpc@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_rpc-1.zip: 93%
+2024-11-08T20:18:26.980Z [Modules] Streaming discord_rpc@1 to /home/dregos/.config/discord/0.0.73/modules/pending/discord_rpc-1.zip: 100%
+2024-11-08T20:18:26.981Z [Modules] Finished module downloads. [success: 3] [failure: 0]
+2024-11-08T20:18:27.248Z [Modules] Installing discord_game_utils@1 from /home/dregos/.config/discord/0.0.73/modules/pending/discord_game_utils-1.zip
+2024-11-08T20:18:27.397Z [Modules] Installing discord_rpc@1 from /home/dregos/.config/discord/0.0.73/modules/pending/discord_rpc-1.zip
+2024-11-08T20:18:27.434Z [Modules] Finished module installations. [success: 3] [failure: 0]
