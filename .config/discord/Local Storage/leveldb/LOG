@@ -1,4 +1,0 @@
-2024/11/08-22:18:11.484 2ae8 Creating DB /home/dregos/.config/discord/Local Storage/leveldb since it was missing.
-2024/11/08-22:18:11.502 2ae8 Reusing MANIFEST /home/dregos/.config/discord/Local Storage/leveldb/MANIFEST-000001
-2024/11/08-22:20:37.464 2ae8 Level-0 table #5: started
-2024/11/08-22:20:37.488 2ae8 Level-0 table #5: 3270612 bytes OK
