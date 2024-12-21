@@ -24,10 +24,4 @@ alias neofetch='fastfetch'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.ghcup/bin:~/.ghcup/ghc/9.4.8/bin/:~/.config/emacs/bin:~/.local/bin/
-
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  tmux attach-session -t default || tmux new-session -s default
-fi
-
-bindkey -v
+  export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.ghcup/bin:~/.config/emacs/bin:~/.local/bin/:~/.ghcup/hls/2.9.0.1/bin:~/.ghcup/ghc/9.2.8/bin/

@@ -39,13 +39,13 @@ xset s off
 
 case $wm_choice in
 1)
-  exec awesome
+  exec i3
   ;;
 2)
-  exec startxfce4
+  exec awesome
   ;;
 *)
   echo "Unknown window manager: $wm_choice"
-  exec awesome
+  exec i3
   ;;
 esac
