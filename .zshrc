@@ -24,6 +24,10 @@ alias add-key='eval $(ssh-agent -s) && ssh-add ~/.ssh/personal'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-  export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.ghcup/bin:~/.local/bin/
+export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.ghcup/bin:~/.local/bin/
 
 [ -f "/home/dregos/.ghcup/env" ] && . "/home/dregos/.ghcup/env" # ghcup-env
+
+if command -v tmux&> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
