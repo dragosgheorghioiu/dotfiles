@@ -36,16 +36,17 @@ else
 fi
 
 xset s off
+exec awesome
 
-case $wm_choice in
-1)
-  exec i3
-  ;;
-2)
-  exec awesome
-  ;;
-*)
-  echo "Unknown window manager: $wm_choice"
-  exec i3
-  ;;
-esac
+# case $wm_choice in
+# 1)
+#   exec i3
+#   ;;
+# 2)
+#   exec awesome
+#   ;;
+# *)
+#   echo "Unknown window manager: $wm_choice"
+#   exec i3
+#   ;;
+# esac

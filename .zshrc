@@ -1,8 +1,7 @@
-# Download Znap, if it's not there yet.
 [[ -r ~/.zsh_repos/znap/znap.zsh ]] ||
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git ~/.zsh_repos/znap
-source ~/.zsh_repos/znap/znap.zsh  # Start Znap
+source ~/.zsh_repos/znap/znap.zsh
 
 znap prompt sindresorhus/pure
 
@@ -21,7 +20,10 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 alias ls='ls --color'
 alias neofetch='fastfetch'
+alias add-key='eval $(ssh-agent -s) && ssh-add ~/.ssh/personal'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-  export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.ghcup/bin:~/.config/emacs/bin:~/.local/bin/:~/.ghcup/hls/2.9.0.1/bin:~/.ghcup/ghc/9.2.8/bin/
+  export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.ghcup/bin:~/.local/bin/
+
+[ -f "/home/dregos/.ghcup/env" ] && . "/home/dregos/.ghcup/env" # ghcup-env
