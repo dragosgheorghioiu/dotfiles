@@ -61,7 +61,7 @@ local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.ge
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty"
+terminal = "alacritty"
 editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -125,7 +125,7 @@ myreyboardlayout = awful.widget.keyboardlayout()
 
 -- Volume widget
 volumecfg = deficient.volume_control({
-	font = "JetBrainsMono Nerd Font Propo " .. dpi(14),
+	font = "JetBrainsMono Nerd Font Propo " .. dpi(20),
 	widget_text = {
 		on = " <span color='#4b6568'></span>% 3d%% ", -- three digits, fill with leading spaces
 		off = " <span color='#4b6568'></span> MUT ",
@@ -133,7 +133,7 @@ volumecfg = deficient.volume_control({
 })
 
 -- instanciate widget:
-screensaver_ctrl = deficient.screensaver({})
+-- screensaver_ctrl = deficient.screensaver({})
 
 -- {{{ Wibar
 -- Create a textclock widget
@@ -144,7 +144,6 @@ kbdcfg = deficient.keyboard_layout_indicator({
 		{ name = "us", layout = "us", variant = nil },
 		{ name = "ro", layout = "ro", variant = "std" },
 	},
-	-- optionally, specify commands to be executed after changing layout:
 	post_set_hooks = {
 		"xmodmap ~/.Xmodmap",
 		"setxkbmap -option caps:escape",
@@ -213,11 +212,11 @@ awful.screen.connect_for_each_screen(function(s)
 	-- Wallpaper
 	set_wallpaper(s)
 
-	local font_string = "JetBrainsMono Nerd Font Propo " .. tostring(dpi(14, s))
+	local font_string = "JetBrainsMono Nerd Font Propo " .. tostring(dpi(20, s))
 	beautiful.font = font_string
 
 	-- set height of wibar
-	local wibar_height = dpi(36, s)
+	local wibar_height = dpi(50, s)
 
 	-- set font for textclock for each screen
 	mytextclock.format = "<span font='"
@@ -313,7 +312,6 @@ awful.screen.connect_for_each_screen(function(s)
 			layout = wibox.layout.fixed.horizontal,
 			mysystray,
 			-- kbdcfg.widget,
-			screensaver_ctrl.widget,
 			volumecfg.widget,
 			battery_widget({
 				adapter = "BAT1",
@@ -451,20 +449,18 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "p", function()
 		menubar.show()
 	end, { description = "show the menubar", group = "launcher" }),
-	awful.key({ modkey }, "d", function()
-		awful.spawn(
-			"rofi -show drun -show-icons -sorting-method fzf -hover-select -me-select-entry '' -me-accept-entry MousePrimary -icon-theme 'ePapirus'"
-		)
-	end, { description = "show the menubar", group = "launcher" }),
 	awful.key({ modkey, "Shift" }, "x", function()
 		awful.spawn("i3lock -c 000000")
 	end, { description = "lockscreen" }),
-	awful.key({ modkey }, "w", function()
-		awful.spawn("rofi -show window -show-icons")
-	end, { description = "show the open windows", group = "launcher" }),
 	awful.key({ modkey }, "Print", function()
-		awful.spawn("flameshot gui")
-	end, { description = "flameshot", group = "launcher" })
+		awful.util.spawn_with_shell("maim -s | xclip -selection clipboard -t image/png -i")
+	end, { description = "screenshot"}),
+	awful.key({ modkey, "Shift" }, "Print", function()
+		awful.util.spawn_with_shell("maim | xclip -selection clipboard -t image/png -i")
+	end, { description = "screenshot"}),
+	awful.key({ modkey, "Shift" }, "s", function()
+		kbdcfg:next()
+	end)
 )
 
 clientkeys = gears.table.join(
