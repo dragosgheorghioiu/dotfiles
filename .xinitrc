@@ -29,13 +29,17 @@ if [ -f "$usermodmap" ]; then
   xmodmap "$usermodmap"
 fi
 
-if xrandr --query | grep "HDMI-1-0 connected"; then
-  xrandr --output eDP1 --rate 144 --mode 1920x1080 --pos 0x1080 --rotate normal --output DP2 --off --output HDMI2 --off --output VIRTUAL1 --off --output HDMI-1-0 --primary --rate 144 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-0 --off --output DP-1-1 --off
+if xrandr --query | grep "HDMI-A-0 connected"; then
+  export AWSM_MONITORS=2
+  xrandr --output eDP --rate 120 --mode 2880x1800 --pos 3840x360 --rotate normal --output DP2 --off --output HDMI2 --off --output VIRTUAL1 --off --output HDMI-A-0 --primary --rate 120 --mode 1920x1080 --pos 0x0 --scale 2x2 --rotate normal --output DP-1-0 --off --output DP-1-1 --off
 else
-  xrandr --output HDMI-0 --off --output DP-0 --off --output DP-1 --off --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-2 --off --output HDMI-1-2 --off
+  export AWSM_MONITORS=1
+  xrandr --output eDP --primary --mode 2880x1800 --rate 120 --pos 0x0 --rotate normal --output HDMI-A-0 --off
 fi
 
 xset s off
+xset r rate 200 50
+exec awesome
 
 case $wm_choice in
 1)

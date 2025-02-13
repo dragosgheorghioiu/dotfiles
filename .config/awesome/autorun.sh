@@ -22,4 +22,4 @@ fi
 
 pkill picom; picom -b
 run xclip
-run redshift -l N 44° 25′ 56'':E 26° 6′ 22'
+run redshift -l 44.25:26.6 -m randr -v

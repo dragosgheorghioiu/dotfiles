@@ -67,7 +67,7 @@ size = 14.0
 normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
 
 [env]
-WINIT_X11_SCALE_FACTOR = "1.0"
+WINIT_X11_SCALE_FACTOR = "1.5"
 
 [window]
 padding = { x = 0, y = 4 }
