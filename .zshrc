@@ -18,13 +18,12 @@ alias v='nvim'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-autoload -Uz compinit
-zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
-if [[ (! -f "$zcompdump" || "$zcompdump" -ot "$ZSHRC") ]]; then
-    compinit
-else
-    compinit -C
-fi
+zi for \
+    atload"zicompinit; zicdreplay" \
+    blockf \
+    lucid \
+    wait \
+  zsh-users/zsh-completions
 
 export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.local/bin/
 
