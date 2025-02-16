@@ -96,44 +96,18 @@ awful.layout.layouts = {
 }
 -- }}}
 
--- {{{ Menu
--- Create a launcher widget and a main menu
-myawesomemenu = {
-	{
-		"hotkeys",
-		function()
-			hotkeys_popup.show_help(nil, awful.screen.focused())
-		end,
-	},
-	{ "manual", terminal .. " -e man awesome" },
-	{ "edit config", editor_cmd .. " " .. awesome.conffile },
-	{ "restart", awesome.restart },
-	{
-		"quit",
-		function()
-			awesome.quit()
-		end,
-	},
-}
-
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
--- Keyboard map indicator and switcher
-myreyboardlayout = awful.widget.keyboardlayout()
-
 -- Volume widget
 volumecfg = deficient.volume_control({
-	font = "JetBrainsMono Nerd Font Propo " .. dpi(20),
+	font = "jetbrainsmono nerd font propo " .. dpi(20),
 	widget_text = {
 		on = " <span color='#4b6568'></span>% 3d%% ", -- three digits, fill with leading spaces
 		off = " <span color='#4b6568'></span> MUT ",
 	},
 })
-
--- instanciate widget:
--- screensaver_ctrl = deficient.screensaver({})
 
 -- {{{ Wibar
 -- Create a textclock widget
@@ -144,11 +118,21 @@ kbdcfg = deficient.keyboard_layout_indicator({
 		{ name = "us", layout = "us", variant = nil },
 		{ name = "ro", layout = "ro", variant = "std" },
 	},
-	post_set_hooks = {
-		"xmodmap ~/.Xmodmap",
-		"setxkbmap -option caps:escape",
-	},
 })
+kbdcfg.widget.font = "jetbrainsmono nerd font propo " .. dpi(20)
+
+kbdicon = wibox.widget.textbox()
+kbdicon:set_font("jetbrainsmono nerd font propo " .. dpi(20))
+kbdicon:set_markup("<span color='#4b6568'>󰌌</span> ")
+
+kbdpadding = wibox.widget.textbox()
+kbdpadding:set_font("jetbrainsmono nerd font propo " .. dpi(20))
+kbdpadding:set_text(" ")
+
+local kbdwidget = wibox.layout.fixed.horizontal()
+kbdwidget:add(kbdicon)
+kbdwidget:add(kbdcfg.widget)
+kbdwidget:add(kbdpadding)
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -311,7 +295,7 @@ awful.screen.connect_for_each_screen(function(s)
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
 			mysystray,
-			-- kbdcfg.widget,
+      kbdwidget,
 			volumecfg.widget,
 			battery_widget({
 				adapter = "BAT1",
@@ -458,7 +442,7 @@ globalkeys = gears.table.join(
 	awful.key({ modkey, "Shift" }, "Print", function()
 		awful.util.spawn_with_shell("maim | xclip -selection clipboard -t image/png -i")
 	end, { description = "screenshot"}),
-	awful.key({ modkey, "Shift" }, "s", function()
+	awful.key({ modkey }, "space", function()
 		kbdcfg:next()
 	end)
 )
@@ -472,8 +456,8 @@ clientkeys = gears.table.join(
 		c:kill()
 	end, { description = "close", group = "client" }),
 	awful.key(
-		{ modkey, "Control" },
-		"space",
+		{ modkey, "Shift" },
+		"f",
 		awful.client.floating.toggle,
 		{ description = "toggle floating", group = "client" }
 	),
@@ -499,10 +483,6 @@ clientkeys = gears.table.join(
 		c.maximized_vertical = not c.maximized_vertical
 		c:raise()
 	end, { description = "(un)maximize vertically", group = "client" })
-	-- awful.key({ modkey, "Shift" }, "m", function(c)
-	-- 	c.maximized_horizontal = not c.maximized_horizontal
-	-- 	c:raise()
-	-- end, { description = "(un)maximize horizontally", group = "client" })
 )
 
 -- Bind all key numbers to tags.
@@ -642,46 +622,6 @@ client.connect_signal("manage", function(c)
 	end
 end)
 
--- Add a titlebar if titlebars_enabled is set to true in the rules.
-client.connect_signal("request::titlebars", function(c)
-	-- buttons for the titlebar
-	local buttons = gears.table.join(
-		awful.button({}, 1, function()
-			c:emit_signal("request::activate", "titlebar", { raise = true })
-			awful.mouse.client.move(c)
-		end),
-		awful.button({}, 3, function()
-			c:emit_signal("request::activate", "titlebar", { raise = true })
-			awful.mouse.client.resize(c)
-		end)
-	)
-
-	awful.titlebar(c):setup({
-		{ -- Left
-			awful.titlebar.widget.iconwidget(c),
-			buttons = buttons,
-			layout = wibox.layout.fixed.horizontal,
-		},
-		{ -- Middle
-			{ -- Title
-				align = "left",
-				widget = awful.titlebar.widget.titlewidget(c),
-			},
-			buttons = buttons,
-			layout = wibox.layout.flex.horizontal,
-		},
-		{ -- Right
-			awful.titlebar.widget.floatingbutton(c),
-			awful.titlebar.widget.maximizedbutton(c),
-			awful.titlebar.widget.stickybutton(c),
-			awful.titlebar.widget.ontopbutton(c),
-			awful.titlebar.widget.closebutton(c),
-			layout = wibox.layout.fixed.horizontal(),
-		},
-		layout = wibox.layout.align.horizontal,
-	})
-end)
-
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
 	c:emit_signal("request::activate", "mouse_enter", { raise = false })
@@ -693,5 +633,5 @@ end)
 client.connect_signal("unfocus", function(c)
 	c.border_color = beautiful.border_normal
 end)
--- }}}
+
 awful.util.spawn_with_shell("~/.config/awesome/autorun.sh")
