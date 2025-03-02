@@ -123,7 +123,7 @@ kbdcfg.widget.font = "jetbrainsmono nerd font propo " .. dpi(20)
 
 kbdicon = wibox.widget.textbox()
 kbdicon:set_font("jetbrainsmono nerd font propo " .. dpi(20))
-kbdicon:set_markup("<span color='#4b6568'>󰌌</span> ")
+kbdicon:set_markup(" <span color='#4b6568'>󰌌</span> ")
 
 kbdpadding = wibox.widget.textbox()
 kbdpadding:set_font("jetbrainsmono nerd font propo " .. dpi(20))
@@ -401,9 +401,6 @@ globalkeys = gears.table.join(
 	awful.key({ modkey, "Control" }, "l", function()
 		awful.tag.incncol(-1, nil, true)
 	end, { description = "decrease the number of columns", group = "layout" }),
-	awful.key({ modkey }, "space", function()
-		awful.layout.inc(1)
-	end, { description = "select next", group = "layout" }),
 	awful.key({ modkey, "Shift" }, "space", function()
 		awful.layout.inc(-1)
 	end, { description = "select previous", group = "layout" }),
