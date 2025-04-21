@@ -61,7 +61,7 @@ local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.ge
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "st"
+terminal = "wezterm"
 editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -185,7 +185,7 @@ local function set_wallpaper(s)
 		if type(wallpaper) == "function" then
 			wallpaper = wallpaper(s)
 		end
-		gears.wallpaper.maximized(wallpaper, s, true)
+		gears.wallpaper.maximized(wallpaper, s)
 	end
 end
 
@@ -581,6 +581,7 @@ awful.rules.rules = {
 				"Wpa_gui",
 				"veromix",
 				"xtightvncviewer",
+        "WindowName"
 			},
 
 			-- Note that the name property shown in xprop might be set slightly after creation of the client
