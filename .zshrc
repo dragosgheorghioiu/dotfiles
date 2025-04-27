@@ -1,33 +1,34 @@
-[[ -r ~/.zsh_repos/znap/znap.zsh ]] ||
-    git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/.zsh_repos/znap
-source ~/.zsh_repos/znap/znap.zsh
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
-znap prompt sindresorhus/pure
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit ice wait lucid atload'_zsh_autosuggest_start'
+zinit light zsh-users/zsh-autosuggestions
 
-znap source zsh-users/zsh-autosuggestions
-znap source zsh-users/zsh-syntax-highlighting
-znap source zsh-users/zsh-completions
-znap source Aloxaf/fzf-tab
-
-znap source ohmyzsh/ohmyzsh lib/history
-
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zinit ice pick"async.zsh" src"pure.zsh"
+zinit light sindresorhus/pure
 
 alias ls='ls --color'
 alias neofetch='fastfetch'
-alias add-key='eval $(ssh-agent -s) && ssh-add ~/.ssh/personal'
+alias v='nvim'
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.ghcup/bin:~/.local/bin/
+zi for \
+    atload"zicompinit; zicdreplay" \
+    blockf \
+    lucid \
+    wait \
+  zsh-users/zsh-completions
 
-[ -f "/home/dregos/.ghcup/env" ] && . "/home/dregos/.ghcup/env" # ghcup-env
+export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.local/bin/
 
-if command -v tmux&> /dev/null && [ -z "$TMUX" ]; then
-  tmux attach-session -t default || tmux new-session -s default
-fi
+bindkey -v

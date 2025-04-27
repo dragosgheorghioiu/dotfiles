@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu wmenu-run
+set $menu fuzzel
 
 default_border pixel 2
 default_floating_border pixel 2
@@ -164,6 +164,8 @@ input * repeat_rate 50
     bindsym $mod+a focus parent
 
     bindsym $mod+Shift+x exec 'swaylock -f -c 000000' 
+    bindsym $mod+Shift+q exec '~/.config/fuzzel/scripts/powermenu.sh'
+    bindsym $mod+Shift+p exec '~/.config/fuzzel/scripts/screenshots.sh'
 #
 # Scratchpad:
 #
@@ -223,17 +225,6 @@ client.focused #7d6b89 #1d1f21 #ffffff #46384f #7d6b89
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    # position top
-    #
-    # # When the status_command prints a new line to stdout, swaybar updates.
-    # # The default just shows the current date and time.
-    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-    #
-    # colors {
-    #     statusline #ffffff
-    #     background #323232
-    #     inactive_workspace #32323200 #32323200 #5c5c5c
-    # }
   swaybar_command waybar
 }
 
