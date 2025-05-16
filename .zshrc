@@ -30,5 +30,3 @@ zi for \
   zsh-users/zsh-completions
 
 export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.local/bin/
-
-bindkey -v

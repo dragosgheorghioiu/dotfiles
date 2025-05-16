@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term wezterm
 # Your preferred application launcher
 set $menu fuzzel
 
@@ -31,7 +31,7 @@ output * bg $HOME/Pictures/solid-color-image.png fill
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output eDP-1 scale 1 adaptive_sync on
+# output eDP-1 scale 1 adaptive_sync on
 
 ### Idle configuration
 #
@@ -61,6 +61,12 @@ exec swayidle -w \
 # Read `man 5 sway-input` for more information about this section.
 input * repeat_delay 200
 input * repeat_rate 50
+
+# input * {
+#     xkb_layout ro
+#     xkb_variant std
+#     xkb_options "ctrl:nocaps"
+# }
 
 ### Key bindings
 #
@@ -219,7 +225,7 @@ bindsym $mod+r mode "resize"
 
 client.focused #7d6b89 #1d1f21 #ffffff #46384f #7d6b89
 
-
+seat seat0 xcursor_theme default 24
 
 #
 # Status Bar:
