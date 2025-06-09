@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "network", "backlight", "pulseaudio", "battery"],
+    "modules-right": ["tray", "sway/language", "network", "backlight", "pulseaudio", "battery"],
     "sway/window": {
         "max-length": 50
     },
@@ -72,7 +72,12 @@
       "max-length": 50
   },
   "tray": {
-      "icon-size": 16,
+      "icon-size": 34,
       "spacing": 10
-  }
+  },
+  "sway/language": {
+        "format": "{short}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+        "tooltip-format": "Keyboard Layout: {long}"
+    }
 }
