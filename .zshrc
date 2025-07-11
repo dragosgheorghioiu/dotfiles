@@ -11,7 +11,6 @@ zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
 alias ls='ls --color'
-alias neofetch='fastfetch'
 alias v='nvim'
 
 HISTFILE=~/.zsh_history

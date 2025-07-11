@@ -226,7 +226,7 @@ bindsym $mod+r mode "resize"
     bindsym Print exec grim
     bindsym $mod+space input type:keyboard xkb_switch_layout next
 
-client.focused #7d6b89 #1d1f21 #ffffff #46384f #7d6b89
+client.focused #4d5051 #1d1f21 #ffffff #b1b1b1 #4d5051
 
 seat seat0 xcursor_theme default 48
 

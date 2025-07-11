@@ -1,14 +1,14 @@
 * {
-    font-family:"JetBrainsMono Nerd Font";
+    font-family:"JetBrainsMono Nerd Font Propo";
     font-size: 1.8rem;
 }
 
 window#waybar {
-    border-bottom: 2px solid #7d6b89;
+    border-bottom: 2px solid #4d5051;
     transition-property: background-color;
     transition-duration: .5s;
-    background: #282a3a;
-    color:#ffd866;
+    background: #141415;
+    color: #e8b589;
 }
 
 button {
@@ -22,9 +22,9 @@ button {
 }
 
 #workspaces button {
-    border-bottom: 2px solid #7d6b89;
-    background: #282a3a;
-    color: #ffd866;
+    border-bottom: 2px solid #4d5051;
+    background: #141415;
+    color: #e8b589;
     padding: 0 1rem;
     min-width: 0;
 }
@@ -37,8 +37,7 @@ button {
 }
 
 #workspaces button.focused {
-    background-color: #7d6b89;
-    color: #282a3a;
+    color: #ffd866;
     transition-property: background-color;
     transition-duration: .2s;
 }
@@ -53,6 +52,7 @@ button {
 #network,
 #tray {
     padding: 0.75rem 1.5rem;
+
 }
 
 /* If workspaces is the leftmost module, omit left margin */
