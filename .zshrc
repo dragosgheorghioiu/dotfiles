@@ -9,6 +9,19 @@ setopt COMPLETE_IN_WORD
 setopt ALWAYS_TO_END
 setopt MENU_COMPLETE
 
+alias ls='ls --color'
+alias v='nvim'
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
+export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.local/bin/
+
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # colored completion
@@ -53,16 +66,6 @@ PROMPT='$(pwd_details)
 
 # Continuation prompt
 PROMPT2='%F{242}...%f '
-
-alias ls='ls --color'
-alias v='nvim'
-
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory
-
-eval "$(fzf --zsh)"
 
 if [[ -n $SSH_CONNECTION ]]; then
     PROMPT='%F{242}%n@%m%f $(pure_prompt)
