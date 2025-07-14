@@ -1,13 +1,22 @@
 # pure shell 
-# util functions
-load_plugins() {
-  # check if can reach github
-  if ping -c 1 -W 1 github.com >/dev/null 2>&1; then
-    github_up=true
-  else
-    github_up=false
-  fi
 
+# path
+export PATH=$PATH:$HOME/.cargo/bin/:$HOME/go/bin:~/.local/bin/
+
+# util functions
+autoload_plugin() {
+  local plugin_name=$1
+  local url_var="${plugin_name}[url]"
+  local dir_var="${plugin_name}[dir]"
+  local source_file_var="${plugin_name}[source_file]"
+
+  local plugin_dir="$ZSH_PLUGINS_DIR/${(P)dir_var}"
+  local full_path="$plugin_dir/${(P)source_file_var}"
+
+  [[ -f $full_path ]] && source "$full_path"
+}
+
+setup_plugins() {
   for plugin_name in "${plugins[@]}"; do
     url_var="${plugin_name}[url]"
     source_file_var="${plugin_name}[source_file]"
@@ -21,16 +30,7 @@ load_plugins() {
     full_path="$plugin_dir/$source_file"
 
     [[ ! -d $plugin_dir ]] && 
-      [[ $github_up == true ]] && 
         git clone --depth=1 "$url" "$plugin_dir"
-
-    [[ -f $full_path ]] && {
-      if [[ $plugin_name == syntax_highlighting ]]; then
-        source "$full_path"
-      else
-        source "$full_path" &!
-      fi
-    }
   done
 }
 
@@ -52,8 +52,16 @@ if command -v docker >/dev/null 2>&1 && [ ! -f "${ZSH_COMPLETIONS_DIR}/_docker" 
   docker completion zsh > "${ZSH_COMPLETIONS_DIR}/_docker"
 fi
 
+autoload -Uz compinit
 fpath=("$ZSH_COMPLETIONS_DIR" $fpath)
-autoload -Uz compinit && compinit
+ZSH_COMPDUMP="${ZDOTDIR:-$HOME}/.zcompdump"
+
+compinit -C
+
+if [[ ! -s "$ZSH_COMPDUMP.zwc" || "$ZSH_COMPDUMP" -nt "$ZSH_COMPDUMP.zwc" ]]; then
+  zcompile "$ZSH_COMPDUMP"
+fi
+
 
 # plugins
 typeset -A syntax_highlighting=(
@@ -68,30 +76,29 @@ typeset -A auto_suggestions=(
   source_file "zsh-autosuggestions.zsh"
 )
 
-plugins=(syntax_highlighting auto_suggestions)
+zle-line-init() {
+  autoload_plugin syntax_highlighting
+  autoload_plugin auto_suggestions
+  zle -D zle-line-init
+}
 
-load_plugins
+zle -N zle-line-init
 
 # aliases
 alias ls='ls --color'
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
+for cmd in v vi vim; do alias $cmd='nvim'; done
 
 # fzf integration
-eval "$(fzf --zsh)"
+source <(fzf --zsh)
 
 # TODO: replace with tmux sessionizer
-eval "$(zoxide init --cmd cd zsh)"
+source <(zoxide init zsh --cmd cd)
 
 # history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
-
-# path
-export PATH=$PATH:~/.cargo/bin/:$(go env GOPATH)/bin:~/.local/bin/
 
 # completions
 setopt AUTO_LIST
