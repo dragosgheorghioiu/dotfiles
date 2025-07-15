@@ -4,7 +4,7 @@
 export PATH=$PATH:$HOME/.cargo/bin/:$HOME/go/bin:~/.local/bin/
 
 # util functions
-autoload_plugin() {
+load_plugin() {
   local plugin_name=$1
   local url_var="${plugin_name}[url]"
   local dir_var="${plugin_name}[dir]"
@@ -32,10 +32,6 @@ setup_plugins() {
     [[ ! -d $plugin_dir ]] && 
         git clone --depth=1 "$url" "$plugin_dir"
   done
-}
-
-pwd_details() {
-  echo "%F{yellow}%~%f"
 }
 
 # extras
@@ -77,22 +73,52 @@ typeset -A auto_suggestions=(
 )
 
 zle-line-init() {
-  autoload_plugin syntax_highlighting
+  load_plugin syntax_highlighting
   zle -D zle-line-init
 }
 
 zle -N zle-line-init
-autoload_plugin auto_suggestions
+load_plugin auto_suggestions
 
 # aliases
 alias ls='ls --color'
 for cmd in v vi vim; do alias $cmd='nvim'; done
 
-# fzf integration
-source <(fzf --zsh)
+if command -v fzf >/dev/null 2>&1; then 
+  # tmux-sessionizer
+  tmux-sessionizer() {
+    if [[ $# -eq 1 ]]; then
+        selected=$1
+    else
+        selected=$(find ~/work ~/projects ~/ ~/personal -mindepth 1 -maxdepth 1 -type d | fzf --reverse)
+    fi
 
-# TODO: replace with tmux sessionizer
-source <(zoxide init zsh --cmd cd)
+    if [[ -z $selected ]]; then
+        exit 0
+    fi
+
+    selected_name=$(basename "$selected" | tr . _)
+    tmux_running=$(pgrep tmux)
+
+    tmux has-session -t="$selected_name" 2>/dev/null
+    session_exists=$?
+
+    if [[ -z "$TMUX" ]]; then
+        if [[ $session_exists -eq 0 ]]; then
+            tmux attach-session -t "$selected_name"
+        else
+            tmux new-session -s "$selected_name" -c "$selected"
+        fi
+    else
+        if [[ $session_exists -ne 0 ]]; then
+            tmux new-session -ds "$selected_name" -c "$selected"
+        fi
+        tmux switch-client -t "$selected_name"
+    fi
+  }
+  bindkey -s '^g' "tmux-sessionizer\n"
+  bindkey -s '^t' "tmux-sessionizer .\n"
+fi
 
 # history
 HISTFILE=~/.zsh_history
@@ -143,16 +169,11 @@ zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
 
 # prompt
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 setopt PROMPT_SUBST
 
 PROMPT='
-$(pwd_details)
-%(?.%F{blue}.%F{red})❯%f '
+%F{yellow}%~%f
+${VIRTUAL_ENV:+"($(basename $VIRTUAL_ENV)) "}%(?.%F{blue}.%F{red})❯%f '
 
 PROMPT2='%F{242}...%f '
-
-if [[ -n $SSH_CONNECTION ]]; then
-    PROMPT='%F{242}%n@%m%f $(pure_prompt)
-$(arrow) '
-fi
-
