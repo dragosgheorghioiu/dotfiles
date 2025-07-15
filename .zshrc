@@ -78,11 +78,11 @@ typeset -A auto_suggestions=(
 
 zle-line-init() {
   autoload_plugin syntax_highlighting
-  autoload_plugin auto_suggestions
   zle -D zle-line-init
 }
 
 zle -N zle-line-init
+autoload_plugin auto_suggestions
 
 # aliases
 alias ls='ls --color'
