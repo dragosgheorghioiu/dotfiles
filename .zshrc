@@ -58,7 +58,6 @@ if [[ ! -s "$ZSH_COMPDUMP.zwc" || "$ZSH_COMPDUMP" -nt "$ZSH_COMPDUMP.zwc" ]]; th
   zcompile "$ZSH_COMPDUMP"
 fi
 
-
 # plugins
 typeset -A syntax_highlighting=(
   url "https://github.com/zdharma-continuum/fast-syntax-highlighting.git"
@@ -84,8 +83,23 @@ load_plugin auto_suggestions
 alias ls='ls --color'
 for cmd in v vi vim; do alias $cmd='nvim'; done
 
+# fzf
 if command -v fzf >/dev/null 2>&1; then 
-  # tmux-sessionizer
+  export FZF_DEFAULT_OPTS="
+    --bind 'ctrl-a:toggle-all'
+    --bind 'ctrl-d:half-page-down'
+    --bind 'ctrl-u:half-page-up'
+    --bind 'ctrl-y:accept'
+    --height 50%
+    --layout reverse
+    --color 'pointer:yellow,prompt:blue'
+    --prompt '❯ '
+    --info hidden
+  "
+fi
+
+# tmux-sessionizer
+if command -v fzf >/dev/null 2>&1; then 
   tmux-sessionizer() {
     if [[ $# -eq 1 ]]; then
         selected=$1
@@ -94,7 +108,7 @@ if command -v fzf >/dev/null 2>&1; then
     fi
 
     if [[ -z $selected ]]; then
-        exit 0
+        return
     fi
 
     selected_name=$(basename "$selected" | tr . _)
@@ -167,6 +181,20 @@ zstyle ':completion:*:history-words' stop yes
 zstyle ':completion:*:history-words' remove-all-dups yes
 zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
+
+if command -v fzf >/dev/null 2>&1; then 
+  fzf-history-widget() {
+    local selected_cmd
+    selected_cmd=$(fc -rl 1 | awk '{$1=""; sub(/^ /, ""); print}' | awk '!seen[$0]++' | fzf +s)
+    if [[ -n $selected_cmd ]]; then
+      BUFFER=$selected_cmd
+      CURSOR=${#BUFFER}
+    fi
+    zle reset-prompt
+  }
+  zle -N fzf-history-widget
+  bindkey '^R' fzf-history-widget
+fi
 
 # prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=1
