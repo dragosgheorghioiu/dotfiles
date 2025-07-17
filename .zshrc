@@ -200,8 +200,12 @@ fi
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 setopt PROMPT_SUBST
 
+pending_jobs() {
+ [[ $#jobstates -ne 0 ]] && echo '%B%F{magenta}*%f%b'
+}
+
 PROMPT='
 %F{yellow}%~%f
-${VIRTUAL_ENV:+"($(basename $VIRTUAL_ENV)) "}%(?.%F{blue}.%F{red})❯%f '
+${VIRTUAL_ENV:+"($(basename $VIRTUAL_ENV)) "}$(pending_jobs)%(?.%F{blue}.%F{red})❯%f '
 
 PROMPT2='%F{242}...%f '
