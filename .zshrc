@@ -92,8 +92,8 @@ if command -v fzf >/dev/null 2>&1; then
     --bind 'ctrl-y:accept'
     --height 50%
     --layout reverse
-    --color 'pointer:yellow,prompt:blue'
-    --prompt '❯ '
+    --color 'pointer:#E8B589,prompt:#6E94B2'
+    --prompt 'fzf ❯ '
     --info hidden
   "
 fi
