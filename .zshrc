@@ -44,7 +44,7 @@ ZSH_PLUGINS_DIR="${ZSH_EXTRAS_DIR}/plugins"
 [[ ! -d "$ZSH_PLUGINS_DIR" ]] && mkdir -p "$ZSH_PLUGINS_DIR"
 
 # completions
-if command -v docker >/dev/null 2>&1 && [ ! -f "${ZSH_COMPLETIONS_DIR}/_docker" ]; then
+if (( $+commands[docker] )) && [ ! -f "${ZSH_COMPLETIONS_DIR}/_docker" ]; then
   docker completion zsh > "${ZSH_COMPLETIONS_DIR}/_docker"
 fi
 
@@ -84,7 +84,7 @@ alias ls='ls --color'
 for cmd in v vi vim; do alias $cmd='nvim'; done
 
 # fzf
-if command -v fzf >/dev/null 2>&1; then 
+if (( $+commands[fzf] )); then 
   export FZF_DEFAULT_OPTS="
     --bind 'ctrl-a:toggle-all'
     --bind 'ctrl-d:half-page-down'
@@ -99,7 +99,7 @@ if command -v fzf >/dev/null 2>&1; then
 fi
 
 # tmux-sessionizer
-if command -v fzf >/dev/null 2>&1; then 
+if (( $+commands[fzf] )); then 
   tmux-sessionizer() {
     if [[ $# -eq 1 ]]; then
         selected=$1
@@ -181,7 +181,7 @@ zstyle ':completion:*:history-words' remove-all-dups yes
 zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
 
-if command -v fzf >/dev/null 2>&1; then 
+if (( $+commands[fzf] )); then 
   fzf-history-widget() {
     local selected_cmd
     selected_cmd=$(fc -rl 1 | awk '{$1=""; sub(/^ /, ""); print}' | awk '!seen[$0]++' | fzf +s)
