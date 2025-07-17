@@ -130,8 +130,7 @@ if command -v fzf >/dev/null 2>&1; then
         tmux switch-client -t "$selected_name"
     fi
   }
-  bindkey -s '^g' "tmux-sessionizer\n"
-  bindkey -s '^t' "tmux-sessionizer .\n"
+  alias ts=tmux-sessionizer
 fi
 
 # history
