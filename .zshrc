@@ -78,6 +78,7 @@ zle-line-init() {
 
 zle -N zle-line-init
 load_plugin auto_suggestions
+bindkey '^Y' autosuggest-accept
 
 # aliases
 alias ls='ls --color'
