@@ -225,6 +225,7 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
     bindsym $mod+space input type:keyboard xkb_switch_layout next
+    bindsym $mod+shift+c exec grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:- | tail -n 1 | cut -d " " -f 4 | wl-copy
 
 client.focused #4d5051 #1d1f21 #ffffff #b1b1b1 #4d5051
 

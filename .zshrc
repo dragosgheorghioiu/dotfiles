@@ -60,16 +60,18 @@ fi
 
 # plugins
 typeset -A syntax_highlighting=(
-  url "https://github.com/zdharma-continuum/fast-syntax-highlighting.git"
-  dir "fast-syntax-highlighting"
-  source_file "fast-syntax-highlighting.plugin.zsh"
+  [url]="https://github.com/zdharma-continuum/fast-syntax-highlighting.git"
+  [dir]="fast-syntax-highlighting"
+  [source_file]="fast-syntax-highlighting.plugin.zsh"
 )
 
 typeset -A auto_suggestions=(
-  url "https://github.com/zsh-users/zsh-autosuggestions.git"
-  dir "zsh-autosuggestions"
-  source_file "zsh-autosuggestions.zsh"
+  [url]="https://github.com/zsh-users/zsh-autosuggestions.git"
+  [dir]="zsh-autosuggestions"
+  [source_file]="zsh-autosuggestions.zsh"
 )
+
+typeset -a plugins=("syntax_highlighting" "auto_suggestions")
 
 zle-line-init() {
   load_plugin syntax_highlighting

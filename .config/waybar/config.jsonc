@@ -8,7 +8,7 @@
     },
     "battery": {
       "format": "{icon} {capacity}%",
-      "format-charging": "{capacity}%",
+      "format-charging": " {capacity}%",
       "format-icons": ["", "", "", "", ""]
     },
     "backlight": {
@@ -62,7 +62,7 @@
     "network": {
       "interface": "wlp1s0",
       "format": "{ifname}",
-      "format-wifi": " {essid}",
+      "format-wifi": "  {essid}",
       "format-ethernet": "{ipaddr}/{cidr} 󰊗",
       "format-disconnected": "", //An empty format will hide the module.
       "tooltip-format": "{ifname} via {gwaddr} 󰊗",
