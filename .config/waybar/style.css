@@ -1,14 +1,14 @@
 * {
     font-family:"IosevkaTerm Nerd Font Propo";
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 window#waybar {
     border-bottom: 2px solid #4d5051;
     transition-property: background-color;
     transition-duration: .5s;
-    background: #141415;
-    color: #e8b589;
+    background: #121212;
+    color: #a0b9a0;
 }
 
 button {
@@ -24,8 +24,8 @@ button {
 #workspaces button {
     border-bottom: 2px solid #4d5051;
     background: #141415;
-    color: #e8b589;
-    padding: 0 1rem;
+    color: #a0b9a0;
+    padding: 0 0.6rem;
     min-width: 0;
 }
 
@@ -37,7 +37,7 @@ button {
 }
 
 #workspaces button.focused {
-    color: #ffd866;
+    color: #e0e0e0;
     transition-property: background-color;
     transition-duration: .2s;
 }
@@ -51,8 +51,7 @@ button {
 #backlight,
 #network,
 #tray {
-    padding: 0.75rem 1.5rem;
-
+    padding: 0.5rem 1.5rem;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

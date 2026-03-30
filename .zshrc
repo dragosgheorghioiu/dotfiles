@@ -1,7 +1,7 @@
 # pure shell 
 
 # path
-export PATH=$PATH:$HOME/.cargo/bin/:$HOME/go/bin:~/.local/bin/
+export PATH=$PATH:$HOME/.cargo/bin/:$HOME/go/bin:~/.local/bin/:$HOME/kraftkit/:$HOME/unikraft/
 
 # util functions
 load_plugin() {
@@ -48,8 +48,15 @@ if (( $+commands[docker] )) && [ ! -f "${ZSH_COMPLETIONS_DIR}/_docker" ]; then
   docker completion zsh > "${ZSH_COMPLETIONS_DIR}/_docker"
 fi
 
-autoload -Uz compinit
+if (( $+commands[kraft] )) && [ ! -f "${ZSH_COMPLETIONS_DIR}/_kraft" ]; then
+  mv /home/dregos/.zsh_kraft_completion "${ZSH_COMPLETIONS_DIR}/_kraft"
+fi
+
+export KRAFTKIT_NO_CHECK_UPDATES=true
+export KRAFTKIT_COLLECT_ANONYMOUS_TELEMETRY=true
+
 fpath=("$ZSH_COMPLETIONS_DIR" $fpath)
+autoload -Uz compinit
 ZSH_COMPDUMP="${ZDOTDIR:-$HOME}/.zcompdump"
 
 compinit -C
@@ -84,6 +91,8 @@ bindkey '^Y' autosuggest-accept
 
 # aliases
 alias ls='ls --color'
+alias kc='kraft cloud'
+alias uk='unikraft'
 for cmd in v vi vim; do alias $cmd='nvim'; done
 
 # fzf
@@ -101,13 +110,71 @@ if (( $+commands[fzf] )); then
   "
 fi
 
+if (( $+commands[fzf] )); then
+  fzf-history-widget() {
+    local selected
+
+    selected=$(fc -rl 1 | awk '!seen[$0]++' | fzf \
+      --tac \
+      --no-multi \
+      --query="$LBUFFER" \
+      --prompt='history ❯ ' \
+      --info hidden
+    )
+
+    if [[ -n "$selected" ]]; then
+      BUFFER=$(printf '%s\n' "$selected" | sed 's/^[[:space:]]*[0-9]\+[[:space:]]*//')
+      CURSOR=${#BUFFER}
+    fi
+
+    zle redisplay
+  }
+
+  zle -N fzf-history-widget
+  bindkey '^R' fzf-history-widget
+fi
+
+fd() {
+    fred $1 & disown
+}
+
+# project-finder
+project-finder() {
+    if [[ $# -eq 1 ]]; then
+        selected=$(find -L ~/work ~/projects ~/ ~/.config ~/personal -mindepth 1 -maxdepth 1 -type d | fzf --filter="$1" | head -n 1)
+    else
+        selected=$(find -L ~/work ~/projects ~/ ~/.config ~/personal -mindepth 1 -maxdepth 1 -type d | fzf)
+    fi
+
+  if [[ -n $selected ]] then 
+    cd $selected 
+  else
+    echo "$selected does not exist"
+  fi
+  clear
+}
+alias pf=project-finder
+
+# ssh-agent
+SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.sock"
+export SSH_AUTH_SOCK
+
+if [[ ! -S "$SSH_AUTH_SOCK" ]]; then
+    mkdir -p "${XDG_RUNTIME_DIR:-/tmp}"
+    eval "$(ssh-agent -a "$SSH_AUTH_SOCK")" >/dev/null
+fi
+
+if ! ssh-add -l >/dev/null 2>&1; then
+    [[ -f "$HOME/.ssh/ukgithub" ]] && ssh-add "$HOME/.ssh/ukgithub"
+fi
+
 # tmux-sessionizer
-if (( $+commands[fzf] )); then 
+if (( $+commands[fzf] && $+commands[tmux] )); then 
   tmux-sessionizer() {
     if [[ $# -eq 1 ]]; then
-        selected=$1
+        selected=$(find -L ~/work ~/projects ~/ ~/.config ~/personal -mindepth 1 -maxdepth 1 -type d | fzf --filter="$1" | head -n 1)
     else
-        selected=$(find ~/work ~/projects ~/ ~/personal -mindepth 1 -maxdepth 1 -type d | fzf --reverse)
+        selected=$(find -L ~/work ~/projects ~/ ~/.config ~/personal -mindepth 1 -maxdepth 1 -type d | fzf)
     fi
 
     if [[ -z $selected ]]; then
@@ -183,20 +250,6 @@ zstyle ':completion:*:history-words' stop yes
 zstyle ':completion:*:history-words' remove-all-dups yes
 zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
-
-if (( $+commands[fzf] )); then 
-  fzf-history-widget() {
-    local selected_cmd
-    selected_cmd=$(fc -rl 1 | awk '{$1=""; sub(/^ /, ""); print}' | awk '!seen[$0]++' | fzf +s)
-    if [[ -n $selected_cmd ]]; then
-      BUFFER=$selected_cmd
-      CURSOR=${#BUFFER}
-    fi
-    zle reset-prompt
-  }
-  zle -N fzf-history-widget
-  bindkey '^R' fzf-history-widget
-fi
 
 # prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=1
