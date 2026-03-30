@@ -101,13 +101,31 @@ if (( $+commands[fzf] )); then
   "
 fi
 
+# project-finder
+project-finder() {
+
+    if [[ $# -eq 1 ]]; then
+        selected=$(find -L ~/work ~/projects ~/ ~/.config ~/personal -mindepth 1 -maxdepth 1 -type d | fzf --filter="$1" | head -n 1)
+    else
+        selected=$(find -L ~/work ~/projects ~/ ~/.config ~/personal -mindepth 1 -maxdepth 1 -type d | fzf)
+    fi
+
+  if [[ -n $selected ]] then 
+    cd $selected 
+  else
+    echo "$selected does not exist"
+  fi
+  clear
+}
+alias pf=project-finder
+
 # tmux-sessionizer
-if (( $+commands[fzf] )); then 
+if (( $+commands[fzf] && $+commands[tmux] )); then 
   tmux-sessionizer() {
     if [[ $# -eq 1 ]]; then
         selected=$1
     else
-        selected=$(find ~/work ~/projects ~/ ~/personal -mindepth 1 -maxdepth 1 -type d | fzf --reverse)
+        selected=$(find -L ~/work ~/projects ~/ ~/.config ~/personal -mindepth 1 -maxdepth 1 -type d | fzf --reverse)
     fi
 
     if [[ -z $selected ]]; then
@@ -183,20 +201,6 @@ zstyle ':completion:*:history-words' stop yes
 zstyle ':completion:*:history-words' remove-all-dups yes
 zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
-
-if (( $+commands[fzf] )); then 
-  fzf-history-widget() {
-    local selected_cmd
-    selected_cmd=$(fc -rl 1 | awk '{$1=""; sub(/^ /, ""); print}' | awk '!seen[$0]++' | fzf +s)
-    if [[ -n $selected_cmd ]]; then
-      BUFFER=$selected_cmd
-      CURSOR=${#BUFFER}
-    fi
-    zle reset-prompt
-  }
-  zle -N fzf-history-widget
-  bindkey '^R' fzf-history-widget
-fi
 
 # prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=1
