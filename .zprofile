@@ -5,6 +5,5 @@ if [ -z "$TMUX" ] && [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x sway > /dev/null; 
     export WLR_RENDERER=vulkan
 
     exec sway
-    # startx
 fi
 

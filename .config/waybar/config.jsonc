@@ -60,7 +60,7 @@
         "ignored-sinks": ["Easy Effects Sink"]
     },
     "network": {
-      "interface": "wlp0s20f3",
+      "interface": "wlp1s0",
       "format": "{ifname}",
       "format-wifi": "  {essid}",
       "format-ethernet": "{ipaddr}/{cidr} 󰊗",
@@ -72,7 +72,7 @@
       "max-length": 30
   },
   "tray": {
-      "icon-size": 24,
+      "icon-size": 36,
       "spacing": 10
   },
   "sway/language": {
