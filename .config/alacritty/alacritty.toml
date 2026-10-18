@@ -5,7 +5,7 @@ dynamic_padding = true
 size = 18.0
 
 [font.normal]
-family = "IosevkaTerm Nerd Font"
+family = "IosevkaNerdFontMono"
 
 [colors.primary]
 background = "#121212"
